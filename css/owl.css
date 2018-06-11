@@ -115,7 +115,7 @@
 }
 .owl-carousel .owl-item img {
   display: block;
-  width: 100%;
+  width: 60%;
   -webkit-transform-style: preserve-3d;
 }
 .owl-carousel.owl-text-select-on .owl-item {
@@ -225,7 +225,7 @@
     border-radius: 3px;
     color: white;
     cursor: pointer;
-    display: inline-block;
+    display: none;
     font-size: 14px;
     margin: 5px;
     padding: 4px 7px;
