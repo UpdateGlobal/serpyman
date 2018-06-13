@@ -11,8 +11,12 @@
     <link rel=”canonical” href=””/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon -->   
-    <link href="" rel="shortcut icon"/>
+    <!--favicon-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon.png">
 
     <!-- La tarjeta Twitter comienza desde aquí, si no necesita eliminar esta sección -->
     <!-- <meta name="twitter:card" content="summary" /> -->
@@ -49,11 +53,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
 </head>
 
 <body>
 <div class="page-wrapper">
+    <!--stikySocial-->
+    <div class="header-fix-right is_stuck" style="position: fixed; top: 680px; width: 70px;">
+        <ul class="header-fix-redes">
+            <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
+        </ul>
+        <span class="header-fix-text">Síguenos:</span>
+    </div>
+    <!--stikySocial-->    
  	
     <!-- Preloader -->
     <div class="preloader"></div>
@@ -79,7 +90,7 @@
                             <div id="mySidenav" class="sidenav">
                                 <ul class="side">
                                     <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                                    <li><a href="#">Nosotros</a></li>
+                                    <li><a href="nosotros.php">Nosotros</a></li>
                                     <li class="dropdown">
                                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servcios<i class="fas carer fa-sort-down"></i></a>
                                       <ul class="dropdown-menu">
@@ -96,14 +107,20 @@
                                     <li><a href="contacto-serpyman.php">Contacto</a></li>
                                 </ul>
                                     <div class="row">
-                                        <div class="redes">
                                             <ul class="redes">
-                                                <li><a href="https://www.facebook.com/www.serpymam.com.pe/" target="new"><i class="fab fa-facebook-square"></i> facebook.com</a></li>
-                                                <li><i class="fas fa-envelope"></i> informes@serpyman.com.pe</li>
-                                                <li><i class="fas fa-mobile-alt"></i> (01) 415-3766 <br> RPM : 975 235 649</li>
-                                                <li><i class="fas fa-map-marker-alt"></i> Av. Francisco de Luna Pizarro <br> N°230 Urb. Ingenieria <br> S.M.P – Lima</li>
+                                                <li><i class="fas fasx fa-envelope"></i> informes@serpyman.com.pe</li>
+                                                <li><i class="fas fasx fa-mobile-alt"></i> (01) 415-3766 / RPM : 975 235 649</li>
+                                                <li><i class="fas fasx fa-map-marker-alt"></i> Av. Francisco de Luna Pizarro  N°230 Urb. Ingenieria</li>
                                             </ul>
+                                    </div>
+                                    <!-- <div class="row">
+                                        <div class="social">
+                                           <a href="https://www.facebook.com/www.serpymam.com.pe/" target="new"><i class="fab fa-facebook-square"></i> facebook.com</a> 
                                         </div>
+                                    </div> -->
+
+                                    <div class="row">
+                                        <i class="fab fa-facebook-square"></i>
                                     </div>
                             </div>
                         </nav>

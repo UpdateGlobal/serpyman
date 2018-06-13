@@ -11,8 +11,12 @@
     <link rel=”canonical” href=””/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon -->   
-    <link href="" rel="shortcut icon"/>
+    <!--favicon-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon.png">
 
     <!-- La tarjeta Twitter comienza desde aquí, si no necesita eliminar esta sección -->
     <!-- <meta name="twitter:card" content="summary" /> -->
@@ -49,12 +53,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
 </head>
 
 <body>
 <div class="page-wrapper">
-    
+
+    <!--stikySocial-->
+    <div class="header-fix-right is_stuck" style="position: fixed; top: 680px; width: 70px;">
+        <ul class="header-fix-redes">
+            <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
+        </ul>
+        <span class="header-fix-text">Síguenos:</span>
+    </div>
+    <!--stikySocial-->
+
     <!-- Preloader -->
     <div class="preloader"></div>
     <!-- preloader -->
@@ -79,7 +91,7 @@
                             <div id="mySidenav" class="sidenav">
                                 <ul class="side">
                                     <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                                    <li><a href="#">Nosotros</a></li>
+                                    <li><a href="nosotros.php">Nosotros</a></li>
                                     <li class="dropdown">
                                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servcios<i class="fas carer fa-sort-down"></i></a>
                                       <ul class="dropdown-menu">
@@ -96,14 +108,20 @@
                                     <li><a href="contacto-serpyman.php">Contacto</a></li>
                                 </ul>
                                     <div class="row">
-                                        <div class="redes">
                                             <ul class="redes">
-                                                <li><a href="https://www.facebook.com/www.serpymam.com.pe/" target="new"><i class="fab fa-facebook-square"></i> facebook.com</a></li>
-                                                <li><i class="fas fa-envelope"></i> informes@serpyman.com.pe</li>
-                                                <li><i class="fas fa-mobile-alt"></i> (01) 415-3766 <br> RPM : 975 235 649</li>
-                                                <li><i class="fas fa-map-marker-alt"></i> Av. Francisco de Luna Pizarro <br> N°230 Urb. Ingenieria <br> S.M.P – Lima</li>
+                                                <li><i class="fas fasx fa-envelope"></i> informes@serpyman.com.pe</li>
+                                                <li><i class="fas fasx fa-mobile-alt"></i> (01) 415-3766 / RPM : 975 235 649</li>
+                                                <li><i class="fas fasx fa-map-marker-alt"></i> Av. Francisco de Luna Pizarro  N°230 Urb. Ingenieria</li>
                                             </ul>
+                                    </div>
+                                    <!-- <div class="row">
+                                        <div class="social">
+                                           <a href="https://www.facebook.com/www.serpymam.com.pe/" target="new"><i class="fab fa-facebook-square"></i> facebook.com</a> 
                                         </div>
+                                    </div> -->
+
+                                    <div class="row">
+                                        <i class="fab fa-facebook-square"></i>
                                     </div>
                             </div>
                         </nav>
@@ -126,35 +144,82 @@
     <!-- Page Banner -->
 
     <!--contenido de servicios-->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row" style="margin-top: -85px;">
-            <div class="col-md-3 col-xs-12" style="margin-top: 80px;">
-                <br>
-                <div class="sec-title" align="left" style="margin-bottom: 0px;">
-                    <h2>Categorias</h2>
-                </div>
-                <ul class="cat">
-                    <li class="black"><a href=""> Seguridad</a></li>
-                    <li class="black"><a href=""> Industrial</a></li>
-                    <li class="black"><a href=""> Residencias</a></li>
-                    <li class="black"><a href=""> Comercial</a></li>
-                    <li class="black"><a href=""> Camiones</a></li>
-                    <li class="black"><a href=""> Escolta</a></li>
-                </ul>
-                <div class="sec-title" align="left" style="margin-bottom: 0px;">
-                    <h2>Tags</h2>
-                </div>
-                <ul class="tag">
-                    <li class="tags black"><a href=""> Seguridad</a></li>
-                    <li class="tags black"><a href=""> Industrial</a></li>
-                    <li class="tags black"><a href=""> Residencias</a></li>
-                    <li class="tags black"><a href=""> Comercial</a></li>
-                    <li class="tags black"><a href=""> Camiones</a></li>
-                    <li class="tags black"><a href=""> Escolta</a></li>
-                </ul>       
+            <div class="col-md-4 col-xs-12" style="margin-top: 30px;">
+                <div class="sidebar">
+                    
+                        <!-- Search -->
+                        <div class="search wow fadeInUp animated" style="visibility: visible;">
+                            <form>
+                                <input type="search" name="name" placeholder="Buscar..">
+                                <input type="submit" value="submit">
+                            </form>
+                        </div>
+                        <div class="blog/popular-post widget wow fadeInUp animated" style="visibility: visible;">
+                            <div class="sec-title" align="left" style="margin-bottom: 0px;">
+                                <h2>Categorias</h2>
+                            </div>
+                            <ul>
+                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Seguridad</a></li>
+                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Industrial</a></li>
+                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Residencias</a></li>
+                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Comercial</a></li>
+                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Camiones</a></li>
+                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Escolta</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="blog/popular-post widget wow fadeInUp animated" style="visibility: visible;">    
+                            <div class="sec-title" align="left" style="margin-bottom: 0px;">
+                                <h2>Tags</h2>
+                            </div>
+                            <ul class="tag">
+                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Seguridad</a></li>
+                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Industrial</a></li>
+                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Residencias</a></li>
+                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Comercial</a></li>
+                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Camiones</a></li>
+                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Escolta</a></li>
+                            </ul>  
+                        </div>
 
+                        
+                        <!-- Newest Posts -->
+                        <div class="blog/popular-post widget wow fadeInUp animated" style="visibility: visible;">
+                            <div class="sec-title" align="left" style="margin-bottom: 0px;">
+                                <h2>Ultimas Noticias</h2>
+                            </div>
+                            <ul class="popular-list">
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/1.jpg" alt=""></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="post.php">Titulo de Post</a></h3>
+                                        <div class="posted-date">Junio 13, 2018</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                                <li>
+                                    <!-- Post Image -->
+                                    <a href="#"><img src="images/blog/popular-post/2.jpg" alt=""></a>
+                                    <!-- Details -->
+                                    <div class="content">
+                                        <h3><a href="post.php">Titulo de Post</a></h3>
+                                        <div class="posted-date">Junio 13, 2018</div>
+                                    </div>
+                                </li>
+                                <!-- Item -->
+                            </ul>
+                        </div><!-- Newest Post Ends-->
+                        
+
+                        
+                    </div>
             </div>
-            <div class="col-md-9 col-xs-12">
+            <div class="col-md-8 col-xs-12">
                 <br>
                 <!--Servicios-->
                 <section class="top-services">
@@ -171,7 +236,7 @@
                                         <div class="inner-box">
                                             <h3>Empresarial</h3>
                                             <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                                            <a href="seguridad-empresarial.php" class="read_more">Leer Mas...</a>
+                                            <a href="post.php" class="read_more">Leer Mas...</a>
                                         </div>
                                     </div>
                                 </div>
@@ -187,7 +252,7 @@
                                         <div class="inner-box">
                                             <h3>Comercial</h3>
                                             <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                                            <a href="seguridad-comercial.php" class="read_more">Leer Mas...</a>
+                                            <a href="post.php" class="read_more">Leer Mas...</a>
                                         </div>
                                     </div>
                                 </div>
@@ -203,7 +268,7 @@
                                         <div class="inner-box">
                                             <h3>Empresarial</h3>
                                             <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                                            <a href="seguridad-empresarial.php" class="read_more">Leer Mas...</a>
+                                            <a href="post.php" class="read_more">Leer Mas...</a>
                                         </div>
                                     </div>
                                 </div>
@@ -219,16 +284,12 @@
                                         <div class="inner-box">
                                             <h3>Comercial</h3>
                                             <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                                            <a href="seguridad-comercial.php" class="read_more">Leer Mas...</a>
+                                            <a href="post.php" class="read_more">Leer Mas...</a>
                                         </div>
                                     </div>
                                 </div>
                             </article>
-                            
 
-                            
-
-                            
                         </div>
                     </div>
                 </section>

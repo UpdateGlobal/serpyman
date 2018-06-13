@@ -65,8 +65,8 @@
         <span class="header-fix-text">Síguenos:</span>
     </div>
     <!--stikySocial-->    
-    
-    <!-- Preloader -->
+
+ 	<!-- Preloader -->
     <div class="preloader"></div>
     <!-- preloader -->
     
@@ -136,79 +136,74 @@
     <!-- Page Banner -->
     <section class="page-banner" style="background-image:url(images/background/page-banner-bg-2.jpg);">
         <div class="auto-container text-center">
-            <h1>Serpyman / Seguridad Residencial</h1>
-            <ul class="bread-crumb"><li><a href="#">Home</a></li> <li>Seguridad Residencial</li></ul>
+            <h1>Serpyman / Contactanos</h1>
+            <ul class="bread-crumb"><li><a href="#">Home</a></li> <li>Contactanos</li></ul>
         </div>
     </section>
     <!-- Page Banner -->
 
-    <!--contenido de servicios-->
-    <div class="container-fluid">
-        <div class="row" style="margin-top: -75px;">
-            <div class="col-md-8 col-xs-12">
-                <br><br>
-                <section class="about-us-area">
-                    <div class="about-upper text-center">
-                        <div class="auto-container">
-                             <div class="sec-title" align="left">
-                                <h2>Seguridad <span> Residencial</span></h2>
+    <!--Contact Us Area-->
+    <section class="contact-us-area">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	
+
+            	<div class="col-md-6 col-sm-12 col-xs-12 contact-form wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
+                	<div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+                        <h2>Contac<span>tanos</span></h2>
+                    </div>
+                    
+                    <form id="contact-form" method="post" action="sendemail.php">
+                        <div class="field-container clearfix">
+                        	
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            	<input type="text" name="username" value="" placeholder="Nombre">
                             </div>
-                            <div class="sec-text wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms" align="left">
-                                <p style="text-align: justify;">
-                                CIA SERPYMAN SECURITY S.A.C. proporciona servicios de seguridad residencial y vigilancia en casas, complejos habitacionales, departamentos y condominios residenciales. Nuestros agentes están preparados para trabajar y ejecutar una serie de actividades que permitan el control de ingreso y salida de personas y el resguardo necesario para mantener la tranquilidad y seguridad de una zona privada.<br>
-
-                                Uno de nuestros objetivos es proteger a familias y a sus propiedades de todos los peligros que puedan atentar contra su integridad. Nuestras operaciones de seguridad van desde la creación de sistemas de vigilancia muy discretos empleando unidades de respuesta y reacción inmediata.<br>
-
-                                Cada cliente tiene sus propias necesidades. Es por ello que en base a dichas necesidades y características nos hemos preparado para poder ofrecerle soluciones específicas en materia de seguridad residencial:<br>
-
-                                <ul class="colunma1">
-                                    <li><i class="fas fa-angle-right"></i> Agente de seguridad en caseta de control y recepción.</li>
-                                    <li><i class="fas fa-angle-right"></i> Control y Vigilancia del acceso a visitantes y vehículos.</li>
-                                    <li><i class="fas fa-angle-right"></i> Chequeos vehiculares.</li>
-                                    <li><i class="fas fa-angle-right"></i> Resguardo del perímetro y alrededores.</li>
-                                    <li><i class="fas fa-angle-right"></i> Rondas constantes y periódicas.</li>
-                                    <li><i class="fas fa-angle-right"></i> Recepción y entrega de correspondencia.</li>
-                                    <li><i class="fas fa-angle-right"></i> Vigilancia en estacionamientos.</li>
-                                </ul>
- 
-                            </p>
-
+                            
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            	<input type="email" name="email" value="" placeholder="Apellidos">
                             </div>
-                            <figure class="image wow zoomIn" data-wow-delay="300ms" data-wow-duration="1000ms"><img src="img/servicios/SERVICIOS/seg_residencial.jpg" alt=""></figure>
+                            
+                            <div class="clearfix"></div>
+                            
+                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            	<input type="text" name="subject" value="" placeholder="Telefono">
+                            </div>
+                             <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                <input type="text" name="subject" value="" placeholder="Correo">
+                            </div>
+                            
+                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            	<textarea name="Mensaje" placeholder="Message"></textarea>
+                            </div>
+                            
+                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            	<button type="submit" name="submit-form" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Enviar Mensaje</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
+                            </div>
+                          
                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-4 col-xs-12">
-                <br><br>
-                <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
-                    <h2>Contac<span>tanos</span></h2>
+                    </form>
                 </div>
-                <form  method="post" action="sendemail.php">
-                    <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="nombre" value="" placeholder="Nombre">
+                <div class="col-md-6 col-sm-12 col-xs-12 contact-form wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
+                    <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+                        <h2>Mas<span> Contacto</span></h2>
                     </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="apellido" value="" placeholder="Apellido">
+                    <div class="project-info">
+                        <ul class="clearfix">
+                            <li><i class="fas fa-map-marker-alt" style="color: #000;"></i> <strong>Dirección:</strong> Av. Francisco de Luna Pizarro  N°230 Urb. Ingenieria</li>
+                            <li><i class="fas fa-mobile-alt" style="color: #000;"></i> <strong>Telefonos :</strong> (01) 415-3766 / RPM : 975 235 649</li>
+                            <li><i class="fas fa-envelope" style="color: #000;"></i> <strong>Correo:</strong> informes@serpyman.com.pe</li>
+                        </ul>
                     </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="telefono" value="" placeholder="Telefono">
-                    </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="correo" value="" placeholder="Correo">
-                    </div>
-                    <div class="form_group col-md-12 col-sm-12 col-xs-12">
-                        <textarea name="message" placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <button type="submit" name="submit-form" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Send Message</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
-                    </div>
-                </form>
+                </div>
+
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.2769658267175!2d-77.06285918486991!3d-12.024443691482093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cedec70910db%3A0xa7318ee42f84b687!2sAv.+Luna+Pizarro+230%2C+Cercado+de+Lima+15103!5e0!3m2!1ses-419!2spe!4v1528921941342"  height="600" frameborder="0" style="border:0; width: 100%" allowfullscreen></iframe>
+            
             </div>
         </div>
-    </div>
-    <!--contenido de servicios-->
-     <br><br><br>
+    </section>
+    <!--Contact Us Area-->
+
     <!--Footer-->
     <section class="foo">
             <div class="row">
@@ -234,16 +229,20 @@
     </section>
     <!--Footer-->
     
+
+            
+    
 </div>
 <!--End pagewrapper-->
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script>
-<script src="js/revolution.min.js"></script>
-<script src="js/bxslider.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.mixitup.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/validate.js"></script>
 <script src="js/wow.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="js/googlemaps.js"></script>
 <script src="js/script.js"></script>
 <script>
 function openNav() {

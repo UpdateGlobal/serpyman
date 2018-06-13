@@ -64,8 +64,8 @@
         </ul>
         <span class="header-fix-text">Síguenos:</span>
     </div>
-    <!--stikySocial-->    
-    
+    <!--stikySocial-->
+ 	
     <!-- Preloader -->
     <div class="preloader"></div>
     <!-- preloader -->
@@ -135,75 +135,88 @@
     
     <!-- Page Banner -->
     <section class="page-banner" style="background-image:url(images/background/page-banner-bg-2.jpg);">
-        <div class="auto-container text-center">
-            <h1>Serpyman / Seguridad Residencial</h1>
-            <ul class="bread-crumb"><li><a href="#">Home</a></li> <li>Seguridad Residencial</li></ul>
+    	<div class="auto-container text-center">
+        	<h1>Nosotros Serpyman</h1>
+            <ul class="bread-crumb"><li><a href="#">Home</a></li> <li>Nosotros Serpyman</li></ul>
         </div>
     </section>
     <!-- Page Banner -->
 
     <!--contenido de servicios-->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row" style="margin-top: -75px;">
-            <div class="col-md-8 col-xs-12">
+            <div class="col-md-12 col-xs-12">
                 <br><br>
                 <section class="about-us-area">
                     <div class="about-upper text-center">
                         <div class="auto-container">
-                             <div class="sec-title" align="left">
-                                <h2>Seguridad <span> Residencial</span></h2>
+                            <div class="sec-title" align="left">
+                                <h2>Nosotros <span> Serpyman</span></h2>
                             </div>
+
+                            <p style="text-align: justify;">Empresa peruana se constituye el 08/08/2013, nace como nueva alternativa en la sociedad, iniciando con un pequeño grupo de agentes de seguridad en una planta industrial, en la actualidad estamos constituidos y autorizados legalmente por la Sucamec.<br>Nuestro compromiso siempre es la Calidad de los servicios de Vigilancia Privada, teniendo un servicio basado en la ética, valores y profesionalismo.<br>En SERPYMAN formamos personal con vocación de servicio, que es altamente entrenado y capacitado, los mismos que son evaluados y supervisados permanentemente basados en los principios de calidad y servicio al cliente, contando para esto con equipos y material de última tecnología.</p>
+                            <br>
+                            <br>
+                            <br>
+
+                            <div class="sec-title" align="left">
+                                <h2>Mision</h2>
+                            </div>
+
+                            <p style="text-align: justify;">SERPYMAM SECURITY S.A.C busca ser el referente en soluciones de seguridad privada, comprometida con la calidad, para superar las expectativas de nuestros clientes. Enfocada hacia una adecuada gestión en el control de los riesgos de seguridad que puedan afectar los intereses de sus clientes, suministrándoles a los beneficiarios del servicio, condiciones apropiadas de seguridad para el desarrollo de sus actividades en un ambiente confiable. Para ello dedica su mayor diligencia a la selección, capacitación y dirección del grupo humano que apoya y presta los servicios de seguridad.</p>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="sec-title" align="left">
+                                <h2>Vsion</h2>
+                            </div>
+
+                            <p style="text-align: justify;">Lograr posicionarse entre las mejores empresas<em> de </em>Seguridad Privada más representativas a nivel local y nacional de nuestro país.<br>Y la vez incursionar la tecnología electrónica en nuestros servicios, encontrar el éxito en todos los campos de la economía nacional.</p>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="sec-title" align="left">
+                                <h2>Valores <span> Corporativos</span></h2>
+                            </div>
+
+                            <p style="text-align: justify;">La Alta Dirección de SERPYMAM SECURITY S.A.C y su grupo de colaboradores se caracteriza por actuar bajo los siguientes valores:</p>
+                            <p style="text-align: justify;"><strong>Compromiso</strong>: Tener disposición al mejoramiento continuo del servicio y a la calidad del mismo.</p>
+                            <p style="text-align: justify;"><strong>Disciplina:</strong> Cumplir a cabalidad con las normas, procesos y procedimientos establecidos de acuerdo a las políticas internas de cada cliente.</p>
+                            <p style="text-align: justify;"><strong>Honestidad</strong>: Transparencia, actuar con rectitud, precios justos y competitivos; cumplir con lo ofrecido.</p>
+                            <p style="text-align: justify;"><strong>Lealtad</strong>: Confidencialidad absoluta y fidelidad.</p>
+                            <p style="text-align: justify;"><strong>Respeto</strong>: Cumplir los términos de los contratos, atención a los requerimientos y buen trato.</p>
+                            <p style="text-align: justify;"><strong>Pasión por el servicio</strong>: Los clientes son socios estratégicos, el objetivo es comprenderlos, para fidelizarlos con la satisfacción de sus necesidades y expectativas.</p>
+                            <p style="text-align: justify;"><strong>Ética:</strong> Trabajar responsablemente, respetando los compromisos, limitándonos a nuestra responsabilidades y obligaciones, cuidando de esta manera el prestigio de nuestra empresa para nuestros clientes.</p>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="sec-title" align="left">
+                                <h2>Porque <span> Elegir </span>Serpyman</h2>
+                            </div>
+
+                            <p style="text-align: justify;">Nos proyectamos hacia el futuro con estrategias y objetivos bien definidos y ampliamente divulgados. Nuestra empresa alcanza sus objetivos procurando que el personal se desarrolle y prospere dentro de una “Cultura Empresarial.</p>
+                            <p style="text-align: justify;">Esta última da una dirección cualitativa a toda la empresa promoviendo tres&nbsp; cualidades fundamentales:</p>
+                            <p style="text-align: justify;"><b>Productividad:</b></p>
+                            <ul style="text-align: justify;">
+                                <li>CIA SERPYMAN SECURITY SAC , sostiene su fortaleza en la obtención de una alta productividad promovida por una política de capacitación y desarrollo del potencial humano.</li>
+                                <li>La productividad se centra en el “Hombre”, el cual optimiza todos los recursos disponibles, incluyendo la tecnología.</li>
+                            </ul>
+                            <p style="text-align: justify;"><b>Confianza.</b></p>
+                            <p style="text-align: justify;">Por que tenemos una política de cultura basado en los valores , para obtener buenos resultados hacemos una gestión de selección de personal, mediante un estudio de filtración de datos&nbsp; de cada unos de los postulantes a Serpyman –&nbsp; Perú</p>
+                            <p style="text-align: justify;"><b>Garantías.</b></p>
+                            <p style="text-align: justify;">Serpyman security SAC, cuenta con las autorizaciones de entidades administrativas de servicios de seguridad y vigilancia privada, como la resolución de gerencia&nbsp; de la Sucamec N°-0015-2017SUCAMEC-GSSP y el certificado de INDECI N°N°06429-2016SGDC/GDE/MDSMP, y Licencia de funcionamiento N° 0025186, emitido por la Municipalidad de San Martin de Porras – Lima.</p>
+
+
+
                             <div class="sec-text wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms" align="left">
-                                <p style="text-align: justify;">
-                                CIA SERPYMAN SECURITY S.A.C. proporciona servicios de seguridad residencial y vigilancia en casas, complejos habitacionales, departamentos y condominios residenciales. Nuestros agentes están preparados para trabajar y ejecutar una serie de actividades que permitan el control de ingreso y salida de personas y el resguardo necesario para mantener la tranquilidad y seguridad de una zona privada.<br>
+                    
 
-                                Uno de nuestros objetivos es proteger a familias y a sus propiedades de todos los peligros que puedan atentar contra su integridad. Nuestras operaciones de seguridad van desde la creación de sistemas de vigilancia muy discretos empleando unidades de respuesta y reacción inmediata.<br>
-
-                                Cada cliente tiene sus propias necesidades. Es por ello que en base a dichas necesidades y características nos hemos preparado para poder ofrecerle soluciones específicas en materia de seguridad residencial:<br>
-
-                                <ul class="colunma1">
-                                    <li><i class="fas fa-angle-right"></i> Agente de seguridad en caseta de control y recepción.</li>
-                                    <li><i class="fas fa-angle-right"></i> Control y Vigilancia del acceso a visitantes y vehículos.</li>
-                                    <li><i class="fas fa-angle-right"></i> Chequeos vehiculares.</li>
-                                    <li><i class="fas fa-angle-right"></i> Resguardo del perímetro y alrededores.</li>
-                                    <li><i class="fas fa-angle-right"></i> Rondas constantes y periódicas.</li>
-                                    <li><i class="fas fa-angle-right"></i> Recepción y entrega de correspondencia.</li>
-                                    <li><i class="fas fa-angle-right"></i> Vigilancia en estacionamientos.</li>
-                                </ul>
- 
-                            </p>
 
                             </div>
-                            <figure class="image wow zoomIn" data-wow-delay="300ms" data-wow-duration="1000ms"><img src="img/servicios/SERVICIOS/seg_residencial.jpg" alt=""></figure>
+                            <figure class="image wow zoomIn" data-wow-delay="300ms" data-wow-duration="1000ms"><img src="img/servicios/SERVICIOS/serv_comercial.jpg" alt=""></figure>
                         </div>
                     </div>
                 </section>
-            </div>
-            <div class="col-md-4 col-xs-12">
-                <br><br>
-                <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
-                    <h2>Contac<span>tanos</span></h2>
-                </div>
-                <form  method="post" action="sendemail.php">
-                    <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="nombre" value="" placeholder="Nombre">
-                    </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="apellido" value="" placeholder="Apellido">
-                    </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="telefono" value="" placeholder="Telefono">
-                    </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="correo" value="" placeholder="Correo">
-                    </div>
-                    <div class="form_group col-md-12 col-sm-12 col-xs-12">
-                        <textarea name="message" placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <button type="submit" name="submit-form" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Send Message</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
@@ -233,7 +246,7 @@
             </div>
     </section>
     <!--Footer-->
-    
+
 </div>
 <!--End pagewrapper-->
 <script src="js/jquery.js"></script> 
