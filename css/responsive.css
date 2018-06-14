@@ -244,8 +244,42 @@
 		height:180px;
 		background-color:rgba(255,255,255,1);
 		background-position:center center;
+		    border-radius: 50%;
 	}
 	
+	.fact-counter-one .inner .column .content1{
+		padding:60px 0px 0px;
+		top:0px;
+		width:180px;
+		margin:0 auto;
+		height:180px;
+		background-color:rgba(255,255,255,1);
+		background-position:center center;
+		    border-radius: 50%;
+	}
+	.fact-counter-one .inner .column .content2{
+		padding:60px 0px 0px;
+		top:0px;
+		width:180px;
+		margin:0 auto;
+		height:180px;
+		background-color:rgba(255,255,255,1);
+		background-position:center center;
+		    border-radius: 50%;
+	}
+	.fact-counter-one .inner .column .content3{
+		padding:60px 0px 0px;
+		top:0px;
+		width:180px;
+		margin:0 auto;
+		height:180px;
+		background-color:rgba(255,255,255,1);
+		background-position:center center;
+		    border-radius: 50%;
+	}
+
+
+
 	.service-tabs .tab-btns .tab-btn,
 	.service-tabs.style-two .tab-btns .tab-btn{
 		padding:20px;	
