@@ -70,68 +70,7 @@
     <div class="preloader"></div>
     <!-- preloader -->
     
-    <!--Menu-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                
-
-                        <nav class="navbar">
-                          <div class="container-fluid" style="padding: 10px 5px 10px;">
-                            <div class="header_box1">
-                                <div class="header_box1_menu"> 
-                                    <span class="budel" onclick="openNav()">&#9776;</span>
-                                </div>
-                                <div class="header_box1_logo"><a href="index.php">
-                                    <img src="img/logo.svg" width="220" class="logo" ></a>
-                                </div>
-                            </div>
-
-                            <div id="mySidenav" class="sidenav">
-                                <ul class="side">
-                                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                                    <li><a href="nosotros.php">Nosotros</a></li>
-                                    <li class="dropdown">
-                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servcios<i class="fas carer fa-sort-down"></i></a>
-                                      <ul class="dropdown-menu">
-                                        <li><a href="seguridad-empresarial.php">Empresarial</a></li>
-                                        <li><a href="seguridad-comercial.php">Comercial</a></li>
-                                        <li><a href="seguridad-industrial.php">Industrial</a></li>
-                                        <li><a href="seguridad-residencial.php">Residencial</a></li>
-                                        <li><a href="escolta-camiones.php">Escolta de Camiones</a></li>
-                                        <li><a href="sistemas-de-alarmas.php">Sistemas de Alarmas</a></li>
-                                      </ul>
-                                    </li>
-                                    <li><a href="politicas-serpyman.php">Politicas</a></li>
-                                    <li><a href="blog.php">Blog</a></li>
-                                    <li><a href="contacto-serpyman.php">Contacto</a></li>
-                                </ul>
-                                    <div class="row">
-                                            <ul class="redes">
-                                                <li><i class="fas fasx fa-envelope"></i> informes@serpyman.com.pe</li>
-                                                <li><i class="fas fasx fa-mobile-alt"></i> (01) 415-3766 / RPM : 975 235 649</li>
-                                                <li><i class="fas fasx fa-map-marker-alt"></i> Av. Francisco de Luna Pizarro  N°230 Urb. Ingenieria</li>
-                                            </ul>
-                                    </div>
-                                    <!-- <div class="row">
-                                        <div class="social">
-                                           <a href="https://www.facebook.com/www.serpymam.com.pe/" target="new"><i class="fab fa-facebook-square"></i> facebook.com</a> 
-                                        </div>
-                                    </div> -->
-
-                                    <div class="row">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </div>
-                            </div>
-                        </nav>
-
-            </div>
-            <div class="col-md-6">
-                <!-- <p>hoola</p> -->
-            </div>
-        </div>
-    </div>
-    <!--Menu-->
+    <?php include ('modulo/menu.php') ?>
     
     <!-- Page Banner -->
     <section class="page-banner" style="background-image:url(images/background/page-banner-bg-2.jpg);">
@@ -159,7 +98,7 @@
                                 </p>
 
                             </div>
-                            <figure class="image wow zoomIn" data-wow-delay="300ms" data-wow-duration="1000ms"><img src="img/servicios/SERVICIOS/seg_camiones.jpg" alt=""></figure>
+                            <figure class="image wow zoomIn" data-wow-delay="300ms" data-wow-duration="1000ms"><img src="img/servicios/seg_camiones.jpg" alt=""></figure>
                         </div>
                     </div>
                 </section>
@@ -186,7 +125,7 @@
                         <textarea name="message" placeholder="Message"></textarea>
                     </div>
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <button type="submit" name="submit-form" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Send Message</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
+                        <button type="submit" name="submit-form" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Enviar Mensaje</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
                     </div>
                 </form>
             </div>
@@ -194,12 +133,12 @@
     </div>
     <!--contenido de servicios-->
      <br><br><br>
-    <!--Footer-->
+   <!--Footer-->
     <section class="foo">
             <div class="row">
                 <div class="co-md-12" align="center">
                     <img src="img/logo_white.svg" class="logo_fo img_foo">
-                    <p class="title_foo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                    <p class="title_foo">CIA SERPYMAN SECURITY S.A.C. Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas</p>
                 </div>
             </div>
             <div class="row img_foo" align="center">

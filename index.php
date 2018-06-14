@@ -71,68 +71,7 @@
     <div class="preloader"></div>
     <!-- preloader -->
 
-    <!--Menu-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                
-
-                        <nav class="navbar">
-                          <div class="container-fluid" style="padding: 10px 5px 10px;">
-                            <div class="header_box1">
-                                <div class="header_box1_menu"> 
-                                    <span class="budel" onclick="openNav()">&#9776;</span>
-                                </div>
-                                <div class="header_box1_logo"><a href="index.php">
-                                    <img src="img/logo.svg" width="220" class="logo" ></a>
-                                </div>
-                            </div>
-
-                            <div id="mySidenav" class="sidenav">
-                                <ul class="side">
-                                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                                    <li><a href="nosotros.php">Nosotros</a></li>
-                                    <li class="dropdown">
-                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servcios<i class="fas carer fa-sort-down"></i></a>
-                                      <ul class="dropdown-menu">
-                                        <li><a href="seguridad-empresarial.php">Empresarial</a></li>
-                                        <li><a href="seguridad-comercial.php">Comercial</a></li>
-                                        <li><a href="seguridad-industrial.php">Industrial</a></li>
-                                        <li><a href="seguridad-residencial.php">Residencial</a></li>
-                                        <li><a href="escolta-camiones.php">Escolta de Camiones</a></li>
-                                        <li><a href="sistemas-de-alarmas.php">Sistemas de Alarmas</a></li>
-                                      </ul>
-                                    </li>
-                                    <li><a href="politicas-serpyman.php">Politicas</a></li>
-                                    <li><a href="blog.php">Blog</a></li>
-                                    <li><a href="contacto-serpyman.php">Contacto</a></li>
-                                </ul>
-                                    <div class="row">
-                                            <ul class="redes">
-                                                <li><i class="fas fasx fa-envelope"></i> informes@serpyman.com.pe</li>
-                                                <li><i class="fas fasx fa-mobile-alt"></i> (01) 415-3766 / RPM : 975 235 649</li>
-                                                <li><i class="fas fasx fa-map-marker-alt"></i> Av. Francisco de Luna Pizarro  N°230 Urb. Ingenieria</li>
-                                            </ul>
-                                    </div>
-                                    <!-- <div class="row">
-                                        <div class="social">
-                                           <a href="https://www.facebook.com/www.serpymam.com.pe/" target="new"><i class="fab fa-facebook-square"></i> facebook.com</a> 
-                                        </div>
-                                    </div> -->
-
-                                    <div class="row">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </div>
-                            </div>
-                        </nav>
-
-            </div>
-            <div class="col-md-6">
-                <!-- <p>hoola</p> -->
-            </div>
-        </div>
-    </div>
-    <!--Menu-->
+    <?php include ('modulo/menu.php') ?>
 
     <!-- Main Slider -->
     <section class="main-slider">
@@ -284,14 +223,14 @@
                     </div>
                         
                     <div class="sec-text wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                        <p> <b>CIA SERPYMAN SECURITY S.A.C.</b>  Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas , simplificando las tareas de resolución de problemas que puedan surgir en los lugares de trabajo y satisfaciendo los requerimientos de nuestros clientes de una manera innovadora.</p>
                         <br>
                         <div class="link-btn"><a class="primary-btn aboutbtn hvr-bounce-to-left"><span class="btn-text">LEER MAS...</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div>
                     </div>
 
                 </div>
-                <div class="col-md-6 col-xs-12">
-                    <img src="img/servicios/SERVICIOS/seg_empresarial.jpg" class="img-responsive">
+                <div class="col-md-6 col-xs-12" align="center">
+                    <img src="img/nosotros.png" class="img-responsive" style="width: 380px;">
                 </div>     
         </div>
 	</section>
@@ -309,13 +248,13 @@
                     <div class="post-inner">
                     
                         <figure class="image">
-                            <img class="img-responsive" src="img/servicios/SERVICIOS/seg_empresarial.jpg" alt="" />
+                            <img class="img-responsive" src="img/servicios/seg_empresarial.jpg" alt="" />
                             <span class="curve"></span>
                         </figure>
                         <div class="content">
                             <div class="inner-box">
-                                <h3>Empresarial</h3>
-                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <h3>Seguridad Empresarial</h3>
+                                <div class="text">Nuestro servicio de seguridad empresarial se remite a un sistema de seguridad integral para una compañía u organización de negocios.</div>
                                 <a href="seguridad-empresarial.php" class="read_more">Leer Mas...</a>
                             </div>
                         </div>
@@ -327,13 +266,13 @@
                     <div class="post-inner">
                     
                         <figure class="image">
-                            <img class="img-responsive" src="img/servicios/SERVICIOS/serv_comercial.jpg" alt="" />
+                            <img class="img-responsive" src="img/servicios/serv_comercial.jpg" alt="" />
                             <span class="curve"></span>
                         </figure>
                         <div class="content">
                             <div class="inner-box">
-                                <h3>Comercial</h3>
-                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <h3>Seguridad Comercial</h3>
+                                <div class="text">Actualmente es necesario que profesionales en seguridad y vigilancia comercial controlen el acceso de los clientes en los establecimientos.</div>
                                 <a href="seguridad-comercial.php" class="read_more">Leer Mas...</a>
                             </div>
                         </div>
@@ -346,13 +285,13 @@
                     <div class="post-inner">
                     
                         <figure class="image">
-                            <img class="img-responsive" src="img/servicios/SERVICIOS/serv_industrial.jpg" alt="" />
+                            <img class="img-responsive" src="img/servicios/serv_industrial.jpg" alt="" />
                             <span class="curve"></span>
                         </figure>
                         <div class="content">
                             <div class="inner-box">
-                                <h3>Industrial</h3>
-                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <h3>Seguridad Industrial</h3>
+                                <div class="text">Una de las labores más importantes dentro de la seguridad de instalaciones es el de la seguridad industrial que se compone del resguardo.</div>
                                 <a href="seguridad-industrial.php" class="read_more">Leer Mas...</a>
                             </div>
                         </div>
@@ -365,13 +304,13 @@
                     <div class="post-inner">
                     
                         <figure class="image">
-                            <img class="img-responsive" src="img/servicios/SERVICIOS/seg_residencial.jpg" alt="" />
+                            <img class="img-responsive" src="img/servicios/seg_residencial.jpg" alt="" />
                             <span class="curve"></span>
                         </figure>
                         <div class="content">
                             <div class="inner-box">
-                                <h3>Residencial</h3>
-                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <h3>Seguridad Residencial</h3>
+                                <div class="text">CIA SERPYMAN SECURITY S.A.C. proporciona servicios de seguridad residencial y vigilancia en casas, complejos habitacionales, departamentos y condominios residenciales.</div>
                                 <a href="seguridad-residencial.php" class="read_more">Leer Mas...</a>
                             </div>
                         </div>
@@ -383,13 +322,13 @@
                     <div class="post-inner">
                     
                         <figure class="image">
-                            <img class="img-responsive" src="img/servicios/SERVICIOS/seg_camiones.jpg" alt="" />
+                            <img class="img-responsive" src="img/servicios/seg_camiones.jpg" alt="" />
                             <span class="curve"></span>
                         </figure>
                         <div class="content">
                             <div class="inner-box">
                                 <h3>Escolta de Camiones</h3>
-                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <div class="text">Protegeremos su valiosa carga desde el punto que nos indique hasta el ingreso a su destino, contamos con procedimientos y formatos que garantizan el fiel cumplimiento.</div>
                                 <a href="escolta-camiones.php" class="read_more">Leer Mas...</a>
                             </div>
                         </div>
@@ -402,13 +341,13 @@
                     <div class="post-inner">
                     
                         <figure class="image">
-                            <img class="img-responsive" src="img/servicios/SERVICIOS/seg_alarmas.jpg" alt="" />
+                            <img class="img-responsive" src="img/servicios/seg_alarmas.jpg" alt="" />
                             <span class="curve"></span>
                         </figure>
                         <div class="content">
                             <div class="inner-box">
                                 <h3>Sistemas de Alarmas</h3>
-                                <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                <div class="text">Seguridad real y única con segmentación activa y pasiva que te permite protección siempre, apoyada por cámaras robóticas con video directo.</div>
                                 <a href="sistemas-de-alarmas.php" class="read_more">Leer Mas...</a>
                             </div>
                         </div>
@@ -422,35 +361,31 @@
     <!--Servicios-->
 
     <!--Trabaja-->
-    <section class="fact-counter fact-counter-one" style="background-image:url(images/parallax/image-1.jpg);">
+    <section class="fact-counter fact-counter-one">
         <div class="inner clearfix">
             
             <!--Column-->
-            <div class="column one odd wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s;">
-                <div class="content"><a href="nosotros.php" class="black">
-                    <span>Unete a Nosotros</span></a>
-                </div>
+            <div class="column one odd wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
+                <div class="content1"></div>
+                <h2 class="work_sec">Disciplina</h2>
             </div>
             
             <!--Column-->
-            <div class="column one even wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s;">
-                <div class="content1"><a href="nosotros.php" class="black">
-                    <span>Porqúe Serpyman</span></a>
-                </div>
+            <div class="column one even wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
+                <div class="content2"></div>
+                <h2 class="work_sec">Honestidad</h2>
             </div>
             
             <!--Column-->
-            <div class="column one odd wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s;">
-                <div class="content2"><a href="nosotros.php" class="black">
-                    <span>Cotización del Servicio</span></a>
-                </div>
+            <div class="column one odd wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
+                <div class="content3"></div>
+                <h2 class="work_sec">Lealtad</h2>
             </div>
             
             <!--Column-->
-            <div class="column one even wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s;">
-                <div class="content3"><a href="nosotros.php" class="black">
-                    <span>Seguridad Residencial</span></a>
-                </div>
+            <div class="column one even wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
+                <div class="content4"></div>
+                <h2 class="work_sec">Ética</h2>
             </div>
             
         </div>
@@ -469,7 +404,7 @@
                     </div>
                         
                     <div class="sec-text wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
-                        <p class="">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in<br>some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                        <p>Todo sobre noticias referente a la seguridad privada y temas relacionados con nuestros servicios</p>
                     </div>
                     </div>
 
@@ -483,8 +418,8 @@
                                 </figure>
                                 <div class="content">
                                     <div class="inner-box">
-                                        <h3>Noticias</h3>
-                                        <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        <h3>Seguridad ciudadana: ¿se invirtió la tendencia?, por Carlos Basombrío Iglesias.</h3>
+                                        <div class="text">“Si responsabilizamos a las instituciones por lo malo que ocurre, admitamos que tienen un mérito cuando los cambios son positivos”.</div>
                                         <a href="#" class="read_more">Leer Mas...</a>
                                     </div>
                                 </div>
@@ -493,29 +428,30 @@
               
                     </section>
                 </div>
-                <div class="col-md-6" align="right">
+                <div class="col-md-6" align="left">
                     <div class="clintes_po">
                     <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
                         <h2>Clientes <span>Serpyman</span></h2>
                     </div>
                         
                     <div class="sec-text wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in<br>some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                        <p>Ellos confian en nosotros, confian en Serpyman.</p>
+                        <br>
                     </div>
                     </div>
 
-                    <div class="owl-carousel owl-theme">
+                    <div class="owl-carousel owl-theme" align="center">
                         <div class="item" align="center">
                             <div class="txt_clientes"></div>
-                            <img src="img/SCE-150x150.png">
+                            <img src="img/sec.jpg">
                         </div>
                         <div class="item" align="center">
                             <div class="txt_clientes"></div>
-                            <img src="img/SCE-150x150.png">
+                            <img src="img/sec.jpg">
                         </div>
                         <div class="item" align="center">
                             <div class="txt_clientes"></div>
-                            <img src="img/SCE-150x150.png">
+                            <img src="img/sec.jpg">
                         </div>
                     </div>
 
@@ -530,7 +466,7 @@
             <div class="row">
                 <div class="co-md-12" align="center">
                     <img src="img/logo_white.svg" class="logo_fo img_foo">
-                    <p class="title_foo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                    <p class="title_foo">CIA SERPYMAN SECURITY S.A.C. Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas</p>
                 </div>
             </div>
             <div class="row img_foo" align="center">
@@ -566,7 +502,7 @@
                 loop:true,
                 margin:10,
                 nav:false,
-                autoplay:true,
+                autoplay:false,
                 responsive:{
                     0:{
                         items:1
@@ -587,7 +523,7 @@ function openNav() {
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.width = "0px";
 }
 </script>
 
