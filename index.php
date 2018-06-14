@@ -59,7 +59,7 @@
 <div class="page-wrapper">
 
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck" style="position: fixed; top: 680px; width: 70px;">
+    <div class="header-fix-right is_stuck hidden-xs" style="position: fixed; top: 75%; width: 70px;">
         <ul class="header-fix-redes">
             <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
         </ul>
@@ -230,7 +230,7 @@
 
                 </div>
                 <div class="col-md-6 col-xs-12" align="center">
-                    <img src="img/nosotros.png" class="img-responsive" style="width: 380px;">
+                    <img src="img/SERVICIOS/seg_empresarial.jpg" class="img-responsive" >
                 </div>     
         </div>
 	</section>

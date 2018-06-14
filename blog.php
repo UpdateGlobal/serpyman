@@ -59,7 +59,7 @@
 <div class="page-wrapper">
 
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck" style="position: fixed; top: 680px; width: 70px;">
+    <div class="header-fix-right is_stuck" style="position: fixed; top: 75%; width: 70px;">
         <ul class="header-fix-redes">
             <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
         </ul>
@@ -168,7 +168,7 @@
                             <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
                                 <div class="post-inner">
                                     <figure class="image">
-                                        <img class="img-responsive" src="img/servicios/SERVICIOS/seg_empresarial.jpg" alt="" />
+                                        <img class="img-responsive" src="img/servicios/seg_empresarial.jpg" alt="" />
                                         <span class="curve"></span>
                                     </figure>
                                     <div class="content">
@@ -184,7 +184,7 @@
                             <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
                                 <div class="post-inner">
                                     <figure class="image">
-                                        <img class="img-responsive" src="img/servicios/SERVICIOS/serv_comercial.jpg" alt="" />
+                                        <img class="img-responsive" src="img/servicios/serv_comercial.jpg" alt="" />
                                         <span class="curve"></span>
                                     </figure>
                                     <div class="content">
@@ -200,7 +200,7 @@
                             <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
                                 <div class="post-inner">
                                     <figure class="image">
-                                        <img class="img-responsive" src="img/servicios/SERVICIOS/seg_empresarial.jpg" alt="" />
+                                        <img class="img-responsive" src="img/servicios/seg_empresarial.jpg" alt="" />
                                         <span class="curve"></span>
                                     </figure>
                                     <div class="content">
@@ -216,7 +216,7 @@
                             <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
                                 <div class="post-inner">
                                     <figure class="image">
-                                        <img class="img-responsive" src="img/servicios/SERVICIOS/serv_comercial.jpg" alt="" />
+                                        <img class="img-responsive" src="img/servicios/serv_comercial.jpg" alt="" />
                                         <span class="curve"></span>
                                     </figure>
                                     <div class="content">
