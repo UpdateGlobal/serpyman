@@ -58,9 +58,9 @@
 <body>
 <div class="page-wrapper">
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck" style="position: fixed; top: 680px; width: 70px;">
+    <div class="header-fix-right is_stuck  hidden-xs hidden-sm" style="position: fixed; top: 70%; width: 70px;">
         <ul class="header-fix-redes">
-            <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
+            <li><a href="https://www.facebook.com/www.serpymam.com.pe/" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
         </ul>
         <span class="header-fix-text">Síguenos:</span>
     </div>
@@ -73,10 +73,10 @@
     <?php include ('modulo/menu.php') ?>
     
     <!-- Page Banner -->
-    <section class="page-banner" style="background-image:url(images/background/page-banner-bg-2.jpg);">
-        <div class="auto-container text-center">
+    <section class="page-banner" style="background-image:url(img/serpyman_head.png);">
+        <div class="auto-container text-right">
             <h1>Serpyman / Contactanos</h1>
-            <ul class="bread-crumb"><li><a href="#">Home</a></li> <li>Contactanos</li></ul>
+            <ul class="bread-crumb"><li><a href="index.php">Home</a></li> <li>Contactanos</li></ul>
         </div>
     </section>
     <!-- Page Banner -->
@@ -143,30 +143,7 @@
     </section>
     <!--Contact Us Area-->
 
-   <!--Footer-->
-    <section class="foo">
-            <div class="row">
-                <div class="co-md-12" align="center">
-                    <img src="img/logo_white.svg" class="logo_fo img_foo">
-                    <p class="title_foo">CIA SERPYMAN SECURITY S.A.C. Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas</p>
-                </div>
-            </div>
-            <div class="row img_foo" align="center">
-                <a href="https://www.behance.net/ventas326d" target="_blank"><span class="social"> <i class="fab fa-behance"></i></span></a>
-                <a href="https://www.linkedin.com/company/update-global-marketing" target="_blank"><span class="social"> <i class="fab fa-linkedin-in"></i></span></a>
-                <a href="https://www.facebook.com/updatemarketing/" target="_blank"><span class="social"> <i class="fab fa-facebook-f"></i></span></a>
-                <a href="https://www.instagram.com/update.pe/" target="_blank"><span class="social"> <i class="fab fa-instagram"></i></span></a>  
-            </div>
-            <div class="btton_foo">
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6" align="right">
-                        <p class="derecho">Todos los Derechos Reservados</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!--Footer-->
+    <?php include ('modulo/footer.php') ?>
     
 
             

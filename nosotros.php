@@ -58,9 +58,9 @@
 <body>
 <div class="page-wrapper">
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck" style="position: fixed; top: 680px; width: 70px;">
+    <div class="header-fix-right is_stuck hidden-xs hidden-sm" style="position: fixed; top: 70%; width: 70px;">
         <ul class="header-fix-redes">
-            <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
+            <li><a href="https://www.facebook.com/www.serpymam.com.pe/" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
         </ul>
         <span class="header-fix-text">Síguenos:</span>
     </div>
@@ -73,10 +73,10 @@
     <?php include ('modulo/menu.php') ?>
     
     <!-- Page Banner -->
-    <section class="page-banner" style="background-image:url(images/background/page-banner-bg-2.jpg);">
-    	<div class="auto-container text-center">
+    <section class="page-banner" style="background-image:url(img/serpyman_head.png);">
+        <div class="auto-container text-right">
         	<h1>Nosotros Serpyman</h1>
-            <ul class="bread-crumb"><li><a href="#">Home</a></li> <li>Nosotros Serpyman</li></ul>
+            <ul class="bread-crumb"><li><a href="index.php">Home</a></li> <li>Nosotros Serpyman</li></ul>
         </div>
     </section>
     <!-- Page Banner -->
@@ -103,7 +103,7 @@
                             <br>
 
                             <div class="sec-title" align="left">
-                                <h2>Mision</h2>
+                                <h2>Misiòn</h2>
                             </div>
 
                             <p style="text-align: justify;">SERPYMAM SECURITY S.A.C busca ser el referente en soluciones de seguridad privada, comprometida con la calidad, para superar las expectativas de nuestros clientes. Enfocada hacia una adecuada gestión en el control de los riesgos de seguridad que puedan afectar los intereses de sus clientes, suministrándoles a los beneficiarios del servicio, condiciones apropiadas de seguridad para el desarrollo de sus actividades en un ambiente confiable. Para ello dedica su mayor diligencia a la selección, capacitación y dirección del grupo humano que apoya y presta los servicios de seguridad.</p>
@@ -111,7 +111,7 @@
                             <br>
                             <br>
                             <div class="sec-title" align="left">
-                                <h2>Vsion</h2>
+                                <h2>Visión</h2>
                             </div>
 
                             <p style="text-align: justify;">Lograr posicionarse entre las mejores empresas<em> de </em>Seguridad Privada más representativas a nivel local y nacional de nuestro país.<br>Y la vez incursionar la tecnología electrónica en nuestros servicios, encontrar el éxito en todos los campos de la economía nacional.</p>
@@ -122,14 +122,21 @@
                                 <h2>Valores <span> Corporativos</span></h2>
                             </div>
 
-                            <p style="text-align: justify;">La Alta Dirección de SERPYMAM SECURITY S.A.C y su grupo de colaboradores se caracteriza por actuar bajo los siguientes valores:</p>
-                            <p style="text-align: justify;"><strong>Compromiso</strong>: Tener disposición al mejoramiento continuo del servicio y a la calidad del mismo.</p>
-                            <p style="text-align: justify;"><strong>Disciplina:</strong> Cumplir a cabalidad con las normas, procesos y procedimientos establecidos de acuerdo a las políticas internas de cada cliente.</p>
-                            <p style="text-align: justify;"><strong>Honestidad</strong>: Transparencia, actuar con rectitud, precios justos y competitivos; cumplir con lo ofrecido.</p>
-                            <p style="text-align: justify;"><strong>Lealtad</strong>: Confidencialidad absoluta y fidelidad.</p>
-                            <p style="text-align: justify;"><strong>Respeto</strong>: Cumplir los términos de los contratos, atención a los requerimientos y buen trato.</p>
-                            <p style="text-align: justify;"><strong>Pasión por el servicio</strong>: Los clientes son socios estratégicos, el objetivo es comprenderlos, para fidelizarlos con la satisfacción de sus necesidades y expectativas.</p>
-                            <p style="text-align: justify;"><strong>Ética:</strong> Trabajar responsablemente, respetando los compromisos, limitándonos a nuestra responsabilidades y obligaciones, cuidando de esta manera el prestigio de nuestra empresa para nuestros clientes.</p>
+                            <p style="text-align: justify;">La Alta Dirección de SERPYMA
+
+                            <p style="text-align: justify;"><strong><i class="fas fa-angle-right"></i> Compromiso</strong>: Tener disposición al mejoramiento contínuo del servicio y a la calidad del mismo.</p>
+
+                            <p style="text-align: justify;"><strong><i class="fas fa-angle-right"></i> Disciplina:</strong> Cumplir a cabalidad con las normas, procesos y procedimientos establecidos de acuerdo a las políticas internas de cada cliente.</p>
+
+                            <p style="text-align: justify;"><strong><i class="fas fa-angle-right"></i> Honestidad</strong>: Transparencia, actuar con rectitud, precios justos y competitivos; cumplir con lo ofrecido.</p>
+
+                            <p style="text-align: justify;"><strong><i class="fas fa-angle-right"></i> Lealtad</strong>: Confidencialidad absoluta y fidelidad.</p>
+
+                            <p style="text-align: justify;"><strong><i class="fas fa-angle-right"></i> Respeto</strong>: Cumplir los términos de los contratos, atención a los requerimientos y buen trato.</p>
+
+                            <p style="text-align: justify;"><strong><i class="fas fa-angle-right"></i> Pasión por el servicio</strong>: Los clientes son socios estratégicos, el objetivo es comprenderlos, para fidelizarlos con la satisfacción de sus necesidades y expectativas.</p>
+
+                            <p style="text-align: justify;"><strong><i class="fas fa-angle-right"></i> Ética:</strong> Trabajar responsablemente, respetando los compromisos, limitándonos a nuestra responsabilidades y obligaciones, cuidando de esta manera el prestigio de nuestra empresa para nuestros clientes.</p>
                             <br>
                             <br>
                             <br>
@@ -165,30 +172,7 @@
     </div>
     <!--contenido de servicios-->
      <br><br><br>
-   <!--Footer-->
-    <section class="foo">
-            <div class="row">
-                <div class="co-md-12" align="center">
-                    <img src="img/logo_white.svg" class="logo_fo img_foo">
-                    <p class="title_foo">CIA SERPYMAN SECURITY S.A.C. Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas</p>
-                </div>
-            </div>
-            <div class="row img_foo" align="center">
-                <a href="https://www.behance.net/ventas326d" target="_blank"><span class="social"> <i class="fab fa-behance"></i></span></a>
-                <a href="https://www.linkedin.com/company/update-global-marketing" target="_blank"><span class="social"> <i class="fab fa-linkedin-in"></i></span></a>
-                <a href="https://www.facebook.com/updatemarketing/" target="_blank"><span class="social"> <i class="fab fa-facebook-f"></i></span></a>
-                <a href="https://www.instagram.com/update.pe/" target="_blank"><span class="social"> <i class="fab fa-instagram"></i></span></a>  
-            </div>
-            <div class="btton_foo">
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6" align="right">
-                        <p class="derecho">Todos los Derechos Reservados</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!--Footer-->
+    <?php include ('modulo/footer.php') ?>
 </div>
 <!--End pagewrapper-->
 <script src="js/jquery.js"></script> 

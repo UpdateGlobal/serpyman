@@ -21,9 +21,9 @@
     position: fixed;
     z-index: 99999;;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 430px) {
 	.header_box1{
-    top: 0px;
+    top: 25px;
     width: 300px;
     height: 60px;
     /* background: #fff; */
@@ -60,7 +60,7 @@
     transform: skewX(-15deg);
     z-index: -30;
 }
-@media  screen  and (max-width: 360px){
+@media  screen  and (max-width: 420px){
 	.header_box1_logo{
     margin-left: -20px;
     height: 60px;
@@ -92,7 +92,7 @@
     border-left: 1px solid #e6eaed;
     border-bottom: 1px solid #e6eaed;
 }
-@media  screen  and (max-width: 360px){
+@media  screen  and (max-width: 420px){
 	.header_box1_menu{
 	    margin: 0;
 	    background-color: #f6bc3f;
@@ -108,8 +108,23 @@
 	}
 
 }
+.img_welcome{
+  padding: 0px 80px 50px 50px;
+}
+
+@media  screen  and (max-width: 769px){
+  .img_welcome{
+  padding: 50px 80px 50px 50px;
+}
+}
+@media  screen  and (max-width: 430px){
+  .img_welcome{
+  padding: 70px 0px 50px 0px;
+}
+}
+
 .budel{
-	font-size:50px;
+	font-size:40px;
 	cursor:pointer; 
 	color: white;
 }
@@ -137,7 +152,7 @@
 }
 
 .sidenav a {
-    /* padding: 8px 8px 8px 32px; */
+    padding: 0px 8px 8px 0px;
     text-decoration: none;
     font-size: 28px;
     color: #fff;
@@ -156,6 +171,15 @@
 	border-right: 2px solid #000;
 }
 
+
+.dropdown-backdrop {
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    z-index: -990; 
+}
 .cont_txt2 {
     color: white;
     padding-left: 20px;
@@ -512,6 +536,22 @@
     top: 3px;
     margin-left: -4px;
 }
+.aaa{
+    position: absolute;
+    top: 100px;
+    font-weight: 700;
+    font-size: 42px;
+    margin: 20%;
+    text-align: center;
+    /* margin-left: 10%; */
+    color: white;
+    background-color: #00000050;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+.title_cat{
+    font-family: 'Hind', sans-serif !important;
+}
 
 /* Bulldozer Multipurpose Construction Template */
 
@@ -575,7 +615,7 @@
  ***/
 
 body {
-	font-family: 'Hind', sans-serif;
+	font-family: 'Hind', sans-serif !important;
 	font-size:14px;
 	color:#505050;
 	line-height:1.6em;
@@ -809,7 +849,7 @@ ul,li{
     display: block;
     line-height: 30px;
     padding: 12px 10px 8px 25px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -943,7 +983,7 @@ ul,li{
 
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 420px){
 
 	.title_foo{
 	margin: 0px 20px;
@@ -1735,7 +1775,7 @@ ul,li{
 	background:#ffffff;
 	border:1px solid #f1f1f1;
 	border-top:none;
-	padding:20px 30px 30px;
+	padding:10px 10px 30px;
 	z-index:5;	
 }
 
@@ -3630,7 +3670,7 @@ ul,li{
 	content:'';
 	position:relative;
 	top:5px;
-	display:block;
+	display:none;
 	width:35px;
 	height:3px;
 	margin:5px auto 0px;
@@ -4676,7 +4716,7 @@ ul,li{
 
 .sidebar .widget h2 {
 	font-size:20px;
-	font-family: 'Raleway',serif;
+	font-family: 'Raleway',serif !important;
 	font-weight:bold;
 	margin-bottom:10px;
 	color:#cccccc;

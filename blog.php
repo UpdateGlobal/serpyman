@@ -59,9 +59,9 @@
 <div class="page-wrapper">
 
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck" style="position: fixed; top: 75%; width: 70px;">
+    <div class="header-fix-right is_stuck  hidden-xs hidden-sm" style="position: fixed; top: 70%; width: 70px;">
         <ul class="header-fix-redes">
-            <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
+            <li><a href="https://www.facebook.com/www.serpymam.com.pe/" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
         </ul>
         <span class="header-fix-text">Síguenos:</span>
     </div>
@@ -74,10 +74,10 @@
     <?php include ('modulo/menu.php') ?>
     
     <!-- Page Banner -->
-    <section class="page-banner" style="background-image:url(images/background/page-banner-bg-2.jpg);">
-        <div class="auto-container text-center">
+    <section class="page-banner" style="background-image:url(img/serpyman_head.png);">
+        <div class="auto-container text-right">
             <h1>Serpyman / Blog de Noticias</h1>
-            <ul class="bread-crumb"><li><a href="#">Home</a></li> <li>Blog de Noticias</li></ul>
+            <ul class="bread-crumb"><li><a href="index.php">Home</a></li> <li>Blog de Noticias</li></ul>
         </div>
     </section>
     <!-- Page Banner -->
@@ -87,86 +87,30 @@
         <div class="row" style="margin-top: -85px;">
             <div class="col-md-4 col-xs-12" style="margin-top: 30px;">
                 <div class="sidebar">
-                    
-                        <!-- Search -->
-                        <div class="search wow fadeInUp animated" style="visibility: visible;">
-                            <form>
-                                <input type="search" name="name" placeholder="Buscar..">
-                                <input type="submit" value="submit">
-                            </form>
+                    <div class="blog/popular-post widget wow fadeInUp animated" style="visibility: visible;">
+                        <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+                            <h2 class="title_cat">Categorias</h2>
                         </div>
-                        <div class="blog/popular-post widget wow fadeInUp animated" style="visibility: visible;">
-                            <div class="sec-title" align="left" style="margin-bottom: 0px;">
-                                <h2>Categorias</h2>
-                            </div>
-                            <ul>
-                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Seguridad</a></li>
-                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Industrial</a></li>
-                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Residencias</a></li>
-                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Comercial</a></li>
-                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Camiones</a></li>
-                                <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Escolta</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="blog/popular-post widget wow fadeInUp animated" style="visibility: visible;">    
-                            <div class="sec-title" align="left" style="margin-bottom: 0px;">
-                                <h2>Tags</h2>
-                            </div>
-                            <ul class="tag">
-                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Seguridad</a></li>
-                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Industrial</a></li>
-                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Residencias</a></li>
-                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Comercial</a></li>
-                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Camiones</a></li>
-                                <li class="tags"><i class="fas fa-check"></i> <a href="" class="black"> Escolta</a></li>
-                            </ul>  
-                        </div>
-
-                        
-                        <!-- Newest Posts -->
-                        <div class="blog/popular-post widget wow fadeInUp animated" style="visibility: visible;">
-                            <div class="sec-title" align="left" style="margin-bottom: 0px;">
-                                <h2>Ultimas Noticias</h2>
-                            </div>
-                            <ul class="popular-list">
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/1.jpg" alt=""></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="post.php">Titulo de Post</a></h3>
-                                        <div class="posted-date">Junio 13, 2018</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                                <li>
-                                    <!-- Post Image -->
-                                    <a href="#"><img src="images/blog/popular-post/2.jpg" alt=""></a>
-                                    <!-- Details -->
-                                    <div class="content">
-                                        <h3><a href="post.php">Titulo de Post</a></h3>
-                                        <div class="posted-date">Junio 13, 2018</div>
-                                    </div>
-                                </li>
-                                <!-- Item -->
-                            </ul>
-                        </div><!-- Newest Post Ends-->
-                        
-
-                        
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Seguridad</a></li>
+                            <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Industrial</a></li>
+                            <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Residencias</a></li>
+                            <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Comercial</a></li>
+                            <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Camiones</a></li>
+                            <li><i class="fas fa-chevron-right"></i><a href="" class="black"> Escolta</a></li>
+                        </ul>
                     </div>
+                </div>
             </div>
             <div class="col-md-8 col-xs-12">
                 <br>
                 <!--Servicios-->
                 <section class="top-services">
-                    <div class="auto-container">
-                                    
+                    <!-- <div class="auto-container">
+ -->                                    
                             <!--Post-->
-                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
-                                <div class="post-inner">
+                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms" style="padding: 0;">
+                                <div class="post-inner" style="padding: 5px;">
                                     <figure class="image">
                                         <img class="img-responsive" src="img/servicios/seg_empresarial.jpg" alt="" />
                                         <span class="curve"></span>
@@ -181,8 +125,8 @@
                                 </div>
                             </article>
                             <!--Post-->
-                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
-                                <div class="post-inner">
+                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms" style="padding: 0;">
+                                <div class="post-inner" style="padding: 5px;">
                                     <figure class="image">
                                         <img class="img-responsive" src="img/servicios/serv_comercial.jpg" alt="" />
                                         <span class="curve"></span>
@@ -197,8 +141,8 @@
                                 </div>
                             </article>
                             <!--Post-->
-                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
-                                <div class="post-inner">
+                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms" style="padding: 0;">
+                                <div class="post-inner" style="padding: 5px;">
                                     <figure class="image">
                                         <img class="img-responsive" src="img/servicios/seg_empresarial.jpg" alt="" />
                                         <span class="curve"></span>
@@ -213,8 +157,8 @@
                                 </div>
                             </article>
                             <!--Post-->
-                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
-                                <div class="post-inner">
+                            <article class="col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms" style="padding: 0;">
+                                <div class="post-inner" style="padding: 5px;">
                                     <figure class="image">
                                         <img class="img-responsive" src="img/servicios/serv_comercial.jpg" alt="" />
                                         <span class="curve"></span>
@@ -230,7 +174,7 @@
                             </article>
 
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </section>
                 <!--Servicios-->
             </div>
@@ -238,30 +182,7 @@
     </div>
     <!--contenido de servicios-->
      <br><br><br>
-   <!--Footer-->
-    <section class="foo">
-            <div class="row">
-                <div class="co-md-12" align="center">
-                    <img src="img/logo_white.svg" class="logo_fo img_foo">
-                    <p class="title_foo">CIA SERPYMAN SECURITY S.A.C. Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas</p>
-                </div>
-            </div>
-            <div class="row img_foo" align="center">
-                <a href="https://www.behance.net/ventas326d" target="_blank"><span class="social"> <i class="fab fa-behance"></i></span></a>
-                <a href="https://www.linkedin.com/company/update-global-marketing" target="_blank"><span class="social"> <i class="fab fa-linkedin-in"></i></span></a>
-                <a href="https://www.facebook.com/updatemarketing/" target="_blank"><span class="social"> <i class="fab fa-facebook-f"></i></span></a>
-                <a href="https://www.instagram.com/update.pe/" target="_blank"><span class="social"> <i class="fab fa-instagram"></i></span></a>  
-            </div>
-            <div class="btton_foo">
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6" align="right">
-                        <p class="derecho">Todos los Derechos Reservados</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!--Footer-->
+    <?php include ('modulo/footer.php') ?>
 
 </div>
 <!--End pagewrapper-->

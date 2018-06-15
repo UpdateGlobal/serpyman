@@ -59,9 +59,9 @@
 <div class="page-wrapper">
 
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck hidden-xs" style="position: fixed; top: 75%; width: 70px;">
+    <div class="header-fix-right is_stuck  hidden-xs hidden-sm" style="position: fixed; top: 70%; width: 70px;">
         <ul class="header-fix-redes">
-            <li><a href="" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
+            <li><a href="https://www.facebook.com/www.serpymam.com.pe/" target="_blank"><img src="img/facebook-f.svg" width="12"></a></li>
         </ul>
         <span class="header-fix-text">Síguenos:</span>
     </div>
@@ -71,7 +71,18 @@
     <div class="preloader"></div>
     <!-- preloader -->
 
-    <?php include ('modulo/menu.php') ?>
+    <?php  include ('modulo/menu.php') ?>
+
+    <!--imagenMovil-->
+    <section class="hidden-sm hidden-md hidden-lg">
+        <div class="container-fluid" style="padding: 0;margin: 0;">
+            <div class="wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms" align="center" style="margin-top: -100px;">
+                <h2 class="aaa">Expertos <br><span>en <br></span>Seguridad</h2>
+            </div>
+            <img src="img/bg_movil.png" style="width: 100%;">
+        </div>
+    </section>
+    <!--imagenMovil-->
 
     <!-- Main Slider -->
     <section class="main-slider">
@@ -94,7 +105,7 @@
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"
-                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="big-title text-right"><h2><span class="txt-white">La Mejor</span> Seguridad <span class="txt-white"><br></span> <span class="txt-white">Peruana</span></h2></div></div>
+                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap; font-size: 32px;"><div class="big-title text-right"><h2><span class="txt-white">La Mejor</span> Seguridad <span class="txt-white"><br></span> <span class="txt-white">Peruana</span></h2></div></div>
                     
                     <div class="tp-caption lfb tp-resizeme"
                     data-x="right" data-hoffset="-15"
@@ -230,7 +241,7 @@
 
                 </div>
                 <div class="col-md-6 col-xs-12" align="center">
-                    <img src="img/SERVICIOS/seg_empresarial.jpg" class="img-responsive" >
+                    <img src="img/SERVICIOS/seg_empresarial.jpg" class="img-responsive img_welcome" >
                 </div>     
         </div>
 	</section>
@@ -365,26 +376,26 @@
         <div class="inner clearfix">
             
             <!--Column-->
-            <div class="column one odd wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
+            <div class="column one odd wow fadeIn animated counted">
                 <div class="content1"></div>
                 <h2 class="work_sec">Disciplina</h2>
             </div>
             
             <!--Column-->
-            <div class="column one even wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
+            <div class="column one even wow fadeIn animated counted">
                 <div class="content2"></div>
                 <h2 class="work_sec">Honestidad</h2>
             </div>
             
             <!--Column-->
-            <div class="column one odd wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
+            <div class="column one odd wow fadeIn animated counted">
                 <div class="content3"></div>
                 <h2 class="work_sec">Lealtad</h2>
             </div>
             
             <!--Column-->
-            <div class="column one even wow fadeIn animated counted" data-wow-delay="0s" data-wow-duration="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 0s; animation-name: fadeIn;">
-                <div class="content4"></div>
+            <div class="column one even wow fadeIn animated counted">
+                <div class="content2"></div>
                 <h2 class="work_sec">Ética</h2>
             </div>
             
@@ -395,7 +406,7 @@
     <!--News Area-->
     <section class="news-area">
     	<div class="auto-container">
-            <div class="row">
+            <div class="cont">
             <div class="row">
                 <div class="col-md-6" align="left">
                     <div class="notice">
@@ -461,30 +472,7 @@
     </section>
     <!--News Area-->
 
-    <!--Footer-->
-    <section class="foo">
-            <div class="row">
-                <div class="co-md-12" align="center">
-                    <img src="img/logo_white.svg" class="logo_fo img_foo">
-                    <p class="title_foo">CIA SERPYMAN SECURITY S.A.C. Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas</p>
-                </div>
-            </div>
-            <div class="row img_foo" align="center">
-                <a href="https://www.behance.net/ventas326d" target="_blank"><span class="social"> <i class="fab fa-behance"></i></span></a>
-                <a href="https://www.linkedin.com/company/update-global-marketing" target="_blank"><span class="social"> <i class="fab fa-linkedin-in"></i></span></a>
-                <a href="https://www.facebook.com/updatemarketing/" target="_blank"><span class="social"> <i class="fab fa-facebook-f"></i></span></a>
-                <a href="https://www.instagram.com/update.pe/" target="_blank"><span class="social"> <i class="fab fa-instagram"></i></span></a>  
-            </div>
-            <div class="btton_foo">
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6" align="right">
-                        <p class="derecho">Todos los Derechos Reservados</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!--Footer-->
+    <?php include ('modulo/footer.php') ?>
      
 </div>
 <!--End pagewrapper-->
