@@ -9,12 +9,11 @@ if (isset($_REQUEST['proceso'])) {
 }
 if($proceso == "Registrar"){
   $titulo       = mysqli_real_escape_string($enlaces, $_POST['titulo']);
-  $imagen       = $_POST['imagen'];
   $descripcion  = mysqli_real_escape_string($enlaces, $_POST['descripcion']);
   if(isset($_POST['orden'])){$orden = $_POST['orden'];}else{$orden = 0;}
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
     
-  $insertarServicio = "INSERT INTO servicios(titulo, imagen, descripcion, orden, estado)VALUE('$titulo', '$imagen', '$descripcion', '$orden', '$estado')";
+  $insertarServicio = "INSERT INTO servicios(titulo, descripcion, orden, estado)VALUE('$titulo', '$descripcion', '$orden', '$estado')";
   $resultadoInsertar = mysqli_query($enlaces,$insertarServicio);
   $mensaje = "<div class='alert alert-success' role='alert'>
           <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
@@ -77,19 +76,6 @@ if($proceso == "Registrar"){
           <form class="fcms" name="fcms" method="post" action="" data-provide="validation" data-disable="false">
             <div class="card-body">
               <?php if(isset($mensaje)){ echo $mensaje; } else {}; ?>
-
-              <div class="form-group row">
-                <div class="col-4 col-lg-2">
-                  <label class="col-form-label" for="imagen">Imagen:</label><br>
-                  <small>(-px x -px)</small>
-                </div>
-                <div class="col-4 col-lg-8">
-                  <input class="form-control" id="imagen" name="imagen" type="text">
-                </div>
-                <div class="col-4 col-lg-2">
-                  <button class="btn btn-info" type="button" name="boton2" onClick="javascript:Imagen('SER');" /><i class="fa fa-save"></i> Examinar</button>
-                </div>
-              </div>
 
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
