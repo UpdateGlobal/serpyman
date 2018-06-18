@@ -84,11 +84,11 @@ if($proceso=="Actualizar"){
             <small></small>
           </h1>
         </div>
-        <?php $page="noticiascategorias"; include("module/menu-noticias.php"); ?>
+        <?php $page="noticias-categorias"; include("module/menu-noticias.php"); ?>
       </header><!--/.header -->
       <div class="main-content">
         <div class="card">
-          <h4 class="card-title"><strong>Editar Categoría</strong></h4>
+          <h4 class="card-title"><strong>Editar Categor&iacute;a</strong></h4>
           <form class="fcms" name="fcms" method="post" action="" data-provide="validation" data-disable="false">
             <div class="card-body">
               <?php if(isset($mensaje)){ echo $mensaje; } else {}; ?>

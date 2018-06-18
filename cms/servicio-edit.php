@@ -11,21 +11,19 @@ if($proceso == ""){
   $consultaServicios = "SELECT * FROM servicios WHERE cod_servicio='$cod_servicio'";
   $ejecutarServicios = mysqli_query($enlaces,$consultaServicios) or die('Consulta fallida: ' . mysqli_error($enlaces));
   $filaSer = mysqli_fetch_array($ejecutarServicios);
-  $cod_servicio = $filaSer['cod_servicio'];
-  $imagen      = $filaSer['imagen'];
-  $titulo      = $filaSer['titulo'];
-  $descripcion = $filaSer['descripcion'];
-  $orden       = $filaSer['orden'];
-  $estado      = $filaSer['estado'];
+    $cod_servicio = $filaSer['cod_servicio'];
+    $titulo       = $filaSer['titulo'];
+    $descripcion  = $filaSer['descripcion'];
+    $orden        = $filaSer['orden'];
+    $estado       = $filaSer['estado'];
 }
 if($proceso=="Actualizar"){
   $cod_servicio     = $_POST['cod_servicio'];
-  $imagen           = $_POST['imagen'];
   $titulo           = mysqli_real_escape_string($enlaces, $_POST['titulo']);
   $descripcion      = mysqli_real_escape_string($enlaces, $_POST['descripcion']);
   if(isset($_POST['orden'])){$orden = $_POST['orden'];}else{$orden = 0;}
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
-  $actualizarServicios  = "UPDATE servicios SET cod_servicio='$cod_servicio', imagen='$imagen', titulo='$titulo', descripcion='$descripcion', orden='$orden', estado='$estado' WHERE cod_servicio='$cod_servicio'";
+  $actualizarServicios  = "UPDATE servicios SET cod_servicio='$cod_servicio', titulo='$titulo', descripcion='$descripcion', orden='$orden', estado='$estado' WHERE cod_servicio='$cod_servicio'";
   $resultadoActualizar = mysqli_query($enlaces,$actualizarServicios) or die('Consulta fallida: ' . mysqli_error($enlaces));
   header("Location:servicios.php");
 }
@@ -33,28 +31,27 @@ if($proceso=="Actualizar"){
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
     <?php include("module/head.php"); ?>
     <script type="text/javascript" src="assets/js/rutinas.js"></script>
     <script>
-    function Validar(){
-      if(document.fcms.titulo.value==""){
-        alert("Debe escribir un título");
-        document.fcms.titulo.focus();
-        return;
+      function Validar(){
+        if(document.fcms.titulo.value==""){
+          alert("Debe escribir un título");
+          document.fcms.titulo.focus();
+          return;
+        }
+        document.fcms.action = "servicio-edit.php";
+        document.fcms.proceso.value="Actualizar";
+        document.fcms.submit();
+      } 
+      function Imagen(codigo){
+        url = "agregar-foto.php?id=" + codigo;
+        AbrirCentro(url,'Agregar', 475, 180, 'no', 'no');
       }
-      document.fcms.action = "servicio-edit.php";
-      document.fcms.proceso.value="Actualizar";
-      document.fcms.submit();
-    } 
-    function Imagen(codigo){
-      url = "agregar-foto.php?id=" + codigo;
-      AbrirCentro(url,'Agregar', 475, 180, 'no', 'no');
-    }
-    function soloNumeros(e){ 
-      var key = window.Event ? e.which : e.keyCode 
-      return ((key >= 48 && key <= 57) || (key==8)) 
-    }
+      function soloNumeros(e){ 
+        var key = window.Event ? e.which : e.keyCode 
+        return ((key >= 48 && key <= 57) || (key==8)) 
+      }
     </script>
   </head>
   <body>
@@ -77,7 +74,6 @@ if($proceso=="Actualizar"){
             <small></small>
           </h1>
         </div>
-        <?php $page="servicios"; include("module/menu-servicios.php"); ?>
       </header><!--/.header -->
       <div class="main-content">
         <div class="card">
@@ -85,19 +81,6 @@ if($proceso=="Actualizar"){
           <form class="fcms" name="fcms" method="post" action="" data-provide="validation" data-disable="false">
             <div class="card-body">
               <?php if(isset($mensaje)){ echo $mensaje; } else {}; ?>
-
-              <div class="form-group row">
-                <div class="col-4 col-lg-2">
-                  <label class="col-form-label" for="imagen">Imagen:</label><br>
-                  <small>(-px x -px)</small>
-                </div>
-                <div class="col-4 col-lg-8">
-                  <input class="form-control" id="imagen" name="imagen" type="text" value="<?php echo $imagen; ?>">
-                </div>
-                <div class="col-4 col-lg-2">
-                  <button class="btn btn-info" type="button" name="boton2" onClick="javascript:Imagen('SER');" /><i class="fa fa-save"></i> Examinar</button>
-                </div>
-              </div>
 
               <div class="form-group row">
                 <div class="col-4 col-lg-2">

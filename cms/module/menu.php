@@ -69,7 +69,7 @@
 
           <li class="menu-item <?php echo ($menu == "politicas" ? "active" : "")?>">
             <a class="menu-link <?php echo ($menu == "politicas" ? "open" : "")?>" href="politicas.php">
-              <span class="icon fa fa-info"></span>
+              <span class="icon fa fa-file-text"></span>
               <span class="title">Pol&iacute;ticas</span>
             </a>
           </li>

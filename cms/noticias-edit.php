@@ -16,6 +16,8 @@ if($proceso == ""){
   $titulo         = htmlspecialchars($filaNot['titulo']);
   $noticia        = htmlspecialchars($filaNot['noticia']);
   $imagen         = $filaNot['imagen'];
+  $fecha          = $filaNot['fecha'];
+  $autor          = $filaNot['autor'];
   $estado         = $filaNot['estado'];
 }
 if($proceso=="Actualizar"){ 
@@ -34,8 +36,10 @@ if($proceso=="Actualizar"){
   }
   $noticia        = mysqli_real_escape_string($enlaces, $_POST['noticia']);
   $imagen         = $_POST['imagen'];
+  $fecha          = $_POST['fecha'];
+  $autor          = $_POST['autor'];
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
-  $actualizarNoticias = "UPDATE noticias SET cod_noticia='$cod_noticia', cod_categoria='$cod_categoria', titulo='$titulo', slug='$slug', noticia='$noticia', imagen='$imagen', estado='$estado' WHERE cod_noticia='$cod_noticia'";
+  $actualizarNoticias = "UPDATE noticias SET cod_noticia='$cod_noticia', cod_categoria='$cod_categoria', slug='$slug', titulo='$titulo', noticia='$noticia', imagen='$imagen', fecha='$fecha', autor='$autor', estado='$estado' WHERE cod_noticia='$cod_noticia'";
   $resultadoActualizar = mysqli_query($enlaces,$actualizarNoticias) or die('Consulta fallida: ' . mysqli_error($enlaces));
   header("Location:noticias.php");
 }

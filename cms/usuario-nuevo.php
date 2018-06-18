@@ -8,12 +8,13 @@ if (isset($_REQUEST['proceso'])) {
   $proceso  = "";
 }
 if($proceso == "Registrar"){
-  $nombres    = mysqli_real_escape_string($enlaces, $_POST['nombres']);
-  $email      = mysqli_real_escape_string($enlaces, $_POST['email']);
-  $imagen     = $_POST['imagen'];
-  $usuario    = mysqli_real_escape_string($enlaces, $_POST['usuario']);
-  $claveemail = mysqli_real_escape_string($enlaces, $_POST['clave']);
-  $clave      = password_hash(mysqli_real_escape_string($enlaces, $_POST['clave']), PASSWORD_BCRYPT);
+  $nombres     = mysqli_real_escape_string($enlaces, $_POST['nombres']);
+  $descripcion = mysqli_real_escape_string($enlaces, $_POST['descripcion']);
+  $email       = mysqli_real_escape_string($enlaces, $_POST['email']);
+  $imagen      = $_POST['imagen'];
+  $usuario     = mysqli_real_escape_string($enlaces, $_POST['usuario']);
+  $claveemail  = mysqli_real_escape_string($enlaces, $_POST['clave']);
+  $clave       = password_hash(mysqli_real_escape_string($enlaces, $_POST['clave']), PASSWORD_BCRYPT);
   if(isset($_POST['visitante'])){$visitante = $_POST['visitante'];}else{$visitante = 0;}
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
     
@@ -54,6 +55,10 @@ if($proceso == "Registrar"){
           <td width='75%'>".$nombres."</th>
         </tr>
         <tr>
+          <td width='25%'><strong>Descripción : </strong></th>
+          <td width='75%'>".$descripcion."</th>
+        </tr>
+        <tr>
           <td width='25%'><strong>Usuario : </strong></th>
           <td width='75%'>".$usuario."</th>
         </tr>
@@ -85,7 +90,7 @@ if($proceso == "Registrar"){
     $mensajeEmail = $mensaje;
     mail($emailDestino,$encabezado,$mensajeEmail,$mailCabecera);
     
-    $insertarUsuarios = "INSERT INTO usuarios (nombres, email, imagen, usuario, clave, visitante, estado)VALUE('$nombres', '$email', '$imagen', '$usuario', '$clave', '$visitante', '$estado')";
+    $insertarUsuarios = "INSERT INTO usuarios (nombres, descripcion, email, imagen, usuario, clave, visitante, estado)VALUE('$nombres', '$descripcion', '$email', '$imagen', '$usuario', '$clave', '$visitante', '$estado')";
     $resultadoInsertar = mysqli_query($enlaces,$insertarUsuarios) or die('Consulta fallida: ' . mysqli_error($enlaces));
     $mensaje = "<div class='alert alert-success' role='alert'>
             <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>

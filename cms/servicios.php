@@ -17,13 +17,13 @@ if ($eliminar == "true") {
       $x++;
       if ($x == 1) {
         $sql = "DELETE FROM servicios WHERE cod_servicio=$id_servicio";
-      } else { 
+      } else {
         $sql = $sql . " OR cod_servicio=$id_servicio";
       }
     }
   }
   mysqli_free_result($sqlResultado);
-  if ($x > 0) { 
+  if ($x > 0) {
     $rs = mysqli_query($enlaces,$sql);
   }
   header ("Location:servicios.php");

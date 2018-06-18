@@ -1,7 +1,7 @@
 <?php include("module/conexion.php"); ?>
 <?php include("module/verificar.php"); ?>
 <?php
-$num = ""; 
+$num = "";
 if (isset($_REQUEST['eliminar'])) {
   $eliminar = $_POST['eliminar'];
 } else {

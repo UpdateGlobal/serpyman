@@ -13,17 +13,19 @@ if($proceso == ""){
   $consultaUsuario = "SELECT * FROM usuarios WHERE cod_usuario='$cod_usuario'";
   $ejecutarUsuario = mysqli_query($enlaces,$consultaUsuario) or die('Consulta fallida: ' . mysqli_error($enlaces));
   $filaUsuario = mysqli_fetch_array($ejecutarUsuario);
-  $cod_usuario  = $filaUsuario['cod_usuario'];
-  $nombres      = mysqli_real_escape_string($enlaces, $filaUsuario['nombres']);
-  $email        = mysqli_real_escape_string($enlaces, $filaUsuario['email']);
-  $imagen       = $filaUsuario['imagen'];
-  $usuario      = mysqli_real_escape_string($enlaces, $filaUsuario['usuario']);
-  $visitante    = $filaUsuario['visitante'];
-  $estado       = $filaUsuario['estado'];
+    $cod_usuario  = $filaUsuario['cod_usuario'];
+    $nombres      = mysqli_real_escape_string($enlaces, $filaUsuario['nombres']);
+    $descripcion  = mysqli_real_escape_string($enlaces, $filaUsuario['descripcion']);
+    $email        = mysqli_real_escape_string($enlaces, $filaUsuario['email']);
+    $imagen       = $filaUsuario['imagen'];
+    $usuario      = mysqli_real_escape_string($enlaces, $filaUsuario['usuario']);
+    $visitante    = $filaUsuario['visitante'];
+    $estado       = $filaUsuario['estado'];
 }
 if($proceso == "Actualizar"){
   $cod_usuario  = $_POST['cod_usuario'];
   $nombres      = mysqli_real_escape_string($enlaces, $_POST['nombres']);
+  $descripcion  = mysqli_real_escape_string($enlaces, $_POST['descripcion']);
   $email        = mysqli_real_escape_string($enlaces, $_POST['email']);
   $imagen       = $_POST['imagen'];
   $usuario      = mysqli_real_escape_string($enlaces, $_POST['usuario']);
@@ -68,6 +70,10 @@ if($proceso == "Actualizar"){
           <td width='75%'>".$nombres."</th>
         </tr>
         <tr>
+          <td width='25%'><strong>Descripción : </strong></th>
+          <td width='75%'>".$descripcion."</th>
+        </tr>
+        <tr>
           <td width='25%'><strong>Usuario : </strong></th>
           <td width='75%'>".$usuario."</th>
         </tr>
@@ -99,7 +105,7 @@ if($proceso == "Actualizar"){
     $mensajeEmail = $mensaje;
     mail($emailDestino,$encabezado,$mensajeEmail,$mailCabecera);
   }
-  $actualizarUsuarios = "UPDATE usuarios SET cod_usuario='$cod_usuario', nombres='$nombres', email='$email', imagen='$imagen', usuario='$usuario', clave='$clave', visitante='$visitante', estado='$estado' WHERE cod_usuario='$cod_usuario'";
+  $actualizarUsuarios = "UPDATE usuarios SET cod_usuario='$cod_usuario', nombres='$nombres', descripcion='$descripcion', email='$email', imagen='$imagen', usuario='$usuario', clave='$clave', visitante='$visitante', estado='$estado' WHERE cod_usuario='$cod_usuario'";
   $resultadoActualizar = mysqli_query($enlaces,$actualizarUsuarios) or die('Consulta fallida: ' . mysqli_error($enlaces));
   header("Location: usuarios.php");
 }
@@ -129,11 +135,6 @@ if($proceso == "Actualizar"){
         if(document.fcms.usuario.value==""){
           alert("Debes ingresar un nombre de usuario");
           document.fcms.usuario.focus();
-          return; 
-        }
-        if(document.fcms.clave.value==""){
-          alert("Debes ingresar una clave");
-          document.fcms.clave.focus();
           return; 
         }
         document.fcms.action = "usuario-edit.php";
@@ -186,6 +187,15 @@ if($proceso == "Actualizar"){
               </div>
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
+                  <label class="col-form-label require" for="descripcion">Descripci&oacute;n:</label>
+                </div>
+                <div class="col-8 col-lg-10">
+                  <textarea class="form-control" id="descripcion" name="descripcion"><?php echo $descripcion; ?></textarea>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-4 col-lg-2">
                   <label class="col-form-label require" for="email">Email:</label>
                 </div>
                 <div class="col-8 col-lg-10">
@@ -224,10 +234,11 @@ if($proceso == "Actualizar"){
               </div>
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
-                  <label class="col-form-label require" for="clave">Clave:</label>
+                  <label class="col-form-label" for="clave">Clave:</label><br>
+                  <small>(Ingrese solo si va a cambiarla)</small>
                 </div>
                 <div class="col-8 col-lg-10">
-                  <input class="form-control" id="clave" name="clave" type="text" value="" required>
+                  <input class="form-control" id="clave" name="clave" type="text" value="">
                   <div class="invalid-feedback"></div>
                 </div>
               </div>

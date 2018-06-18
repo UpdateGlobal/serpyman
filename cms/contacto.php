@@ -59,8 +59,8 @@
                   </li>
                   <?php if($xMap!=""){ ?>
                   <li class="list-group-item">
-                    <strong>Mapa:</strong>
-                    <iframe src="<?php echo $xMap; ?>" width="100%" frameborder="1" height="250"></iframe>
+                    <strong>Mapa:</strong><br>
+                    <?php echo $xMap; ?>
                   </li>
                   <?php }else{ ?>
                   <?php } ?>

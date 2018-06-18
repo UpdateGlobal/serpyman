@@ -24,28 +24,27 @@ if($proceso == "Registrar"){
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <?php include("module/head.php"); ?>
     <script type="text/javascript" src="assets/js/rutinas.js"></script>
     <script>
-    function Validar(){
-      if(document.fcms.titulo.value==""){
-        alert("Debe escribir un título");
-        document.fcms.titulo.focus();
-        return;
+      function Validar(){
+        if(document.fcms.titulo.value==""){
+          alert("Debe escribir un título");
+          document.fcms.titulo.focus();
+          return;
+        }
+        document.fcms.action = "servicio-nuevo.php";
+        document.fcms.proceso.value="Registrar";
+        document.fcms.submit();
       }
-      document.fcms.action = "servicio-nuevo.php";
-      document.fcms.proceso.value="Registrar";
-      document.fcms.submit();
-    } 
-    function Imagen(codigo){
-      url = "agregar-foto.php?id=" + codigo;
-      AbrirCentro(url,'Agregar', 475, 180, 'no', 'no');
-    }
-    function soloNumeros(e){ 
-      var key = window.Event ? e.which : e.keyCode 
-      return ((key >= 48 && key <= 57) || (key==8)) 
-    }
+      function Imagen(codigo){
+        url = "agregar-foto.php?id=" + codigo;
+        AbrirCentro(url,'Agregar', 475, 180, 'no', 'no');
+      }
+      function soloNumeros(e){
+        var key = window.Event ? e.which : e.keyCode
+        return ((key >= 48 && key <= 57) || (key==8))
+      }
     </script>
   </head>
   <body>
@@ -68,7 +67,6 @@ if($proceso == "Registrar"){
             <small></small>
           </h1>
         </div>
-        <?php $page="servicios"; include("module/menu-servicios.php"); ?>
       </header><!--/.header -->
       <div class="main-content">
         <div class="card">
@@ -118,7 +116,7 @@ if($proceso == "Registrar"){
 
             <footer class="card-footer">
               <a href="servicios.php" class="btn btn-secondary"><i class="fa fa-times"></i> Cancelar</a>
-              <button class="btn btn-bold btn-primary" type="button" name="boton" onClick="javascript:Validar();" /><i class="fa fa-chevron-circle-right"></i> Registrar Banner</button>
+              <button class="btn btn-bold btn-primary" type="button" name="boton" onClick="javascript:Validar();" /><i class="fa fa-chevron-circle-right"></i> Registrar Servicio</button>
               <input type="hidden" name="proceso">
             </footer>
 

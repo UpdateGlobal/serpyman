@@ -23,10 +23,11 @@ if($proceso == "Registrar"){
   }
   $imagen       = $_POST['imagen'];
   $noticia      = mysqli_real_escape_string($enlaces, $_POST['noticia']);
+  $autor        = $_POST['autor'];
   $fecha        = $_POST['fecha'];
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
     
-  $insertarNoticia = "INSERT INTO noticias(cod_categoria, slug, titulo, imagen, noticia, fecha, estado)VALUE('$categoria', '$slug', '$titulo', '$imagen', '$noticia', '$fecha', '$estado')";
+  $insertarNoticia = "INSERT INTO noticias(cod_categoria, slug, titulo, imagen, noticia, fecha, autor, estado)VALUE('$categoria', '$slug', '$titulo', '$imagen', '$noticia', '$fecha', '$autor', '$estado')";
   $resultadoInsertar = mysqli_query($enlaces,$insertarNoticia);
   $mensaje = "<div class='alert alert-success' role='alert'>
           <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
@@ -44,7 +45,7 @@ if($proceso == "Registrar"){
         if(document.fcms.titulo.value==""){
           alert("Debe escribir un título");
           document.fcms.titulo.focus();
-          return; 
+          return;
         }
         document.fcms.action = "noticias-nuevo.php";
         document.fcms.proceso.value="Registrar";
@@ -88,7 +89,7 @@ if($proceso == "Registrar"){
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
                   <label class="col-form-label" for="imagen">Imagen:</label><br>
-                  <small>(840px x 613px)</small>
+                  <small>(850px x 400px)</small>
                 </div>
                 <div class="col-4 col-lg-8">
                   <input class="form-control" id="imagen" name="imagen" type="text">
@@ -100,7 +101,7 @@ if($proceso == "Registrar"){
 
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
-                  <label class="col-form-label required" for="categoria">Categorías:</label>
+                  <label class="col-form-label required" for="categoria">Categor&iacute;as:</label>
                 </div>
                 <div class="col-8 col-lg-10">
                   <select class="form-control" id="categoria" name="cod_categoria">
@@ -170,7 +171,8 @@ if($proceso == "Registrar"){
               <?php
                 $fecha = date("Y-m-d");
               ?>
-              <input type="hidden" name="fecha" value="<?php echo $fecha ?>">
+              <input type="hidden" name="fecha" value="<?php echo $fecha; ?>">
+              <input type="hidden" name="autor" value="<?php echo $xAlias; ?>">
               <input type="hidden" name="proceso">
             </footer>
 
