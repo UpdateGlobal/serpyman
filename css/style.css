@@ -901,9 +901,18 @@ ul,li{
 	background:#505050;	
 }
 
-.preloader{ position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:999999; 
-  background-color:#ffffff; background-position:center center; 
-  background-repeat:no-repeat; background-image:url(../images/icons/preloader2.GIF);}
+.preloader{ 
+  position:fixed; 
+  display: block !important;
+  left:0px; 
+  top:0px;
+  width:100%; 
+  height:100%; 
+  z-index:999999; 
+  background-color:#ffffff; 
+  background-position:center center; 
+  background-repeat:no-repeat; 
+  background-image:url(../images/icons/preloader2.GIF);}
 
 .txt_cliente{
 	font-size: 22px;

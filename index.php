@@ -76,7 +76,7 @@
     <!--imagenMovil-->
     <section class="hidden-sm hidden-md hidden-lg">
         <div class="container-fluid" style="padding: 0;margin: 0;">
-            <div class="wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms" align="center" style="margin-top: -100px;">
+            <div align="center" style="margin-top: -100px;">
                 <h2 class="aaa">Expertos <br><span>en <br></span>Seguridad</h2>
             </div>
             <img src="img/bg_movil.png" style="width: 100%;">
@@ -251,7 +251,7 @@
     <section class="top-services">
         <div class="auto-container">
                     <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
-                        <h2>Sercios<span> de Seguridad </span> Serpyman</h2>
+                        <h2>Servicios<span> de Seguridad </span> Serpyman</h2>
                     </div>
                         
                 <!--Post-->
