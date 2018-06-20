@@ -18,7 +18,7 @@ function Validar() {
 		actual = document.imagenes.imagen.value;
 		total = actual.length;
 		tipo = actual.substr(total-3,total)
-		if ((tipo !="jpg") && (tipo !="JPG") && (tipo !="pdf") && (tipo !="PDF") && (tipo !="ico") && (tipo !="ICO") && (tipo !="png") && (tipo !="PNG")) {
+		if ((tipo !="jpg") && (tipo !="JPG") && (tipo !="svg") && (tipo !="SVG") && (tipo !="pdf") && (tipo !="PDF") && (tipo !="ico") && (tipo !="ICO") && (tipo !="png") && (tipo !="PNG")) {
 		alert("Debe de seleccionar Archivo de tipo JPG, PDF, PNG o ICO")
 		return
 	}

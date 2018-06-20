@@ -3,21 +3,90 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="co-md-12" align="center">
-                    <img src="img/logo_white.svg" class="logo_fo img_foo">
-                    <p class="title_foo">CIA SERPYMAN SECURITY S.A.C. Nace como nueva alternativa en la sociedad, porque somos una empresa de seguridad peruana, tiene como objetivo principal, identificar las necesidades de seguridad y vigilancia de las empresas e instituciones públicas y privadas</p>
+                    <?php
+                        $consultarCon = "SELECT * FROM contenidos WHERE cod_contenido='6'";
+                        $resultadoCon = mysqli_query($enlaces,$consultarCon) or die('Consulta fallida: ' . mysqli_error($enlaces));
+                        $filaCon = mysqli_fetch_array($resultadoCon);
+                            $xImagen      = $filaCon['img_contenido'];
+                            $xContenido   = $filaCon['contenido'];
+                            $xEstado      = $filaCon['estado'];
+                    ?>
+                    <img src="cms/assets/img/nosotros/<?php echo $xImagen; ?>" class="logo_fo img_foo">
+                    <p class="title_foo"><?php echo $xContenido; ?></p>
+                    <?php
+                        mysqli_free_result($resultadoCon);
+                    ?>
                 </div>
             </div>
             <div class="row img_foo" align="center">
-                <a href="" target="_blank"><span class="social"> <i class="fab fa-linkedin-in"></i></span></a>
-                <a href="https://www.facebook.com/www.serpymam.com.pe/" target="_blank"><span class="social"> <i class="fab fa-facebook-f"></i></span></a>
-                <a href="" target="_blank"><span class="social"> <i class="fab fa-instagram"></i></span></a>  
+                <?php
+                    $consultarSol = 'SELECT * FROM social WHERE estado='1' ORDER BY orden';
+                    $resultadoSol = mysqli_query($enlaces,$consultarSol) or die('Consulta fallida: ' . mysqli_error($enlaces));
+                    while($filaSol = mysqli_fetch_array($resultadoSol)){
+                        $xType      = $filaSol['type'];
+                        $xLinks     = $filaSol['links'];
+                        $xOrden     = $filaSol['orden'];
+                        if($type="fa-facebook-square"){ $xValor = "fa-facebook-f"; }
+                        if($type="fa-twitter-square"){ $xValor = "fa-twitter"; }
+                        if($type="fa-google-plus-official"){ $xValor = "fa-google-plus-g"; }
+                        if($type="fa-linkedin"){ $xValor = "fa-linkedin-in"; }
+                        if($type="fa-behance"){ $xValor = "fa-behance"; }
+                        if($type="fa-youtube-play"){ $xValor = "fa-youtube"; }
+                        if($type="fa-vimeo"){ $xValor = "fa-vimeo-v"; }
+                        if($type="fa-wordpress"){ $xValor = "fa-wordpress"; }
+                        if($type="fa-tumblr-square"){ $xValor = "fa-tumblr"; }
+                        if($type="fa-pinterest"){ $xValor = "fa-pinterest-p"; }
+                        if($type="fa-instagram"){ $xValor = "fa-instagram"; }
+                        if($type="fa-flickr"){ $xValor = "fa-flickr"; }
+                ?>
+                <a href="" target="_blank"><span class="social"><i class="fab fa-linkedin-in"></i></span></a>
+                <a href="" target="_blank"><span class="social"><i class="fab fa-facebook-f"></i></span></a>
+                <a href="" target="_blank"><span class="social"><i class="fab fa-instagram"></i></span></a>
+
             </div>
             <div class="row" style="background-color: black;">
                 <div class="col-md-6"></div>
                 <div class="col-md-6" align="right">
-                    <p class="derecho">Serpyman 2018 - Diseño por <a href="update.pe">Update Global Marketing</p>
+                    <p class="derecho">Serpyman 2018 - Dise&ntilde;o por <a href="update.pe">Update Global Marketing</p>
                 </div>
             </div>
         </div>    
     </section>
     <!--Footer-->
+    <!--End pagewrapper-->
+    <script src="js/jquery.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/revolution.min.js"></script>
+    <script src="js/bxslider.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            autoplay:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        })
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0px";
+        }
+    </script>

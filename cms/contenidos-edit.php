@@ -27,7 +27,7 @@ if($proceso == "Actualizar"){
 
   $ActualizarCon = "UPDATE contenidos SET cod_contenido='$cod_contenido', titulo_contenido='$titulo_contenido', img_contenido='$img_contenido', contenido='$contenido', estado='$estado' WHERE cod_contenido='$cod_contenido'";
   $resultadoActualizar = mysqli_query($enlaces,$ActualizarCon) or die('Consulta fallida: ' . mysqli_error($enlaces));
-  header("Location:nosotros.php");
+  header("Location:contenidos.php");
 }
 ?>
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ if($proceso == "Actualizar"){
         }
       <?php } ?>
         
-        document.fcms.action = "nosotros-edit.php";
+        document.fcms.action = "contenidos-edit.php";
         document.fcms.proceso.value="Actualizar";
         document.fcms.submit();
       }
@@ -67,17 +67,18 @@ if($proceso == "Actualizar"){
         <span class="dot3"></span>
       </div>
     </div>
-    <?php $menu="nosotros"; include("module/menu.php"); ?>
+    <?php $menu="inicio"; include("module/menu.php"); ?>
     <?php include("module/header.php"); ?>
     <!-- Main container -->
     <main>
       <header class="header bg-ui-general">
         <div class="header-info">
           <h1 class="header-title">
-            <strong>Nosotros</strong>
+            <strong>Inicio</strong>
             <small></small>
           </h1>
         </div>
+        <?php $page="inicio-contenido"; include("module/menu-inicio.php"); ?>
       </header><!--/.header -->
       <div class="main-content">
         <div class="card">
@@ -109,12 +110,11 @@ if($proceso == "Actualizar"){
                 </div>
               </div>
 
-              <?php if($cod_contenido==1 || $cod_contenido==6){ ?>
+              <?php if($cod_contenido==6){ ?>
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
                   <label class="col-form-label" for="logo">Imagen:</label><br>
-                  <?php if($cod_contenido==1){ ?><small>(500px x 500px)</small><?php } ?>
-                  <?php if($cod_contenido==6){ ?><small>(300px x 82px)</small><?php } ?>
+                  <small>(300px x 82px)</small>
                 </div>
                 <div class="col-4 col-lg-8">
                   <?php if($xVisitante=="1"){ ?><p><?php echo $img_contenido; ?></p><?php } ?>
@@ -141,7 +141,7 @@ if($proceso == "Actualizar"){
 
             </div>
             <footer class="card-footer">
-              <a href="nosotros.php" class="btn btn-secondary"><i class="fa fa-times"></i> Cancelar</a>
+              <a href="contenidos.php" class="btn btn-secondary"><i class="fa fa-times"></i> Cancelar</a>
               <button class="btn btn-bold btn-primary" type="button" name="boton" onClick="javascript:Validar();" /><i class="fa fa-refresh"></i> Guardar Cambios</button>
               <input type="hidden" name="proceso">
               <input type="hidden" name="cod_contenido" value="<?php echo $cod_contenido; ?>">

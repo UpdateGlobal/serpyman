@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Serpyman</title>
-
-    <meta charset="UTF-8">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <link rel=”canonical” href=””/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--favicon-->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon.png">
-    
+    <?php include("include/head.php"); ?>
     <!-- La tarjeta Twitter comienza desde aquí, si no necesita eliminar esta sección -->
     <!-- <meta name="twitter:card" content="summary" /> -->
     <meta name="twitter:site" content="@yourtwitterusername" />
@@ -31,30 +15,14 @@
     <!-- facebook abrir gráfico comienza desde aquí, si no es necesario, entonces eliminar gráfico abierto relacio -->
     <meta property="og:title" content="" /><!-- maximum 140 char -->
     <meta property="og:url" content="" />
-    <meta property="og:description" content=""><!-- maximum 140 char -->
+    <meta property="og:description" content="" /><!-- maximum 140 char -->
     <meta property="og:locale" content="en_PE" />
     <meta property="og:site_name" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="../img" /> <!-- cuando publiques esta url de la página en Facebook, se mostrará esta imagen -->
-     <!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
+    <meta property="og:image" content="../img" />
+    <meta property="og:image" content="../img" /><!-- cuando publiques esta url de la página en Facebook, se mostrará esta imagen -->
     <!-- facebook open graph ends from here -->
-
-    <!-- Stylesheets -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/revolution-slider.css" rel="stylesheet">
-    <link href="css/owl.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/in_style.css" type="text/css" >
-    <!-- Responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link href="css/responsive.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
-
 <body>
 <div class="page-wrapper">
     <!--stikySocial-->
@@ -200,7 +168,7 @@
         </div>
     </div>
     <!--contenido de servicios-->
-     <br><br><br>
+    <br><br><br>
     <?php include ('modulo/footer.php') ?>
 </div>
 <!--End pagewrapper-->
