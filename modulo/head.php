@@ -11,7 +11,7 @@
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $xTitulo; ?> <?php if($Slogan!=""){ echo "| ".$xSlogan; } ?></title>
+    <title><?php echo $xTitulo; ?> <?php if($xSlogan!=""){ echo "| ".$xSlogan; } ?></title>
     <meta name="description" content="<?php echo $xDes; ?>" />
     <meta name="keywords" content="<?php echo $xKey; ?>" />
     <link rel="canonical" href="http://<?php echo $xUrl; ?>" />

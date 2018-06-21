@@ -20,37 +20,38 @@
             </div>
             <div class="row img_foo" align="center">
                 <?php
-                    $consultarSol = 'SELECT * FROM social WHERE estado='1' ORDER BY orden';
+                    $consultarSol = "SELECT * FROM social WHERE estado='1' ORDER BY orden";
                     $resultadoSol = mysqli_query($enlaces,$consultarSol) or die('Consulta fallida: ' . mysqli_error($enlaces));
                     while($filaSol = mysqli_fetch_array($resultadoSol)){
                         $xType      = $filaSol['type'];
                         $xLinks     = $filaSol['links'];
                         $xOrden     = $filaSol['orden'];
-                        if($type="fa-facebook-square"){ $xValor = "fa-facebook-f"; }
-                        if($type="fa-twitter-square"){ $xValor = "fa-twitter"; }
-                        if($type="fa-google-plus-official"){ $xValor = "fa-google-plus-g"; }
-                        if($type="fa-linkedin"){ $xValor = "fa-linkedin-in"; }
-                        if($type="fa-behance"){ $xValor = "fa-behance"; }
-                        if($type="fa-youtube-play"){ $xValor = "fa-youtube"; }
-                        if($type="fa-vimeo"){ $xValor = "fa-vimeo-v"; }
-                        if($type="fa-wordpress"){ $xValor = "fa-wordpress"; }
-                        if($type="fa-tumblr-square"){ $xValor = "fa-tumblr"; }
-                        if($type="fa-pinterest"){ $xValor = "fa-pinterest-p"; }
-                        if($type="fa-instagram"){ $xValor = "fa-instagram"; }
-                        if($type="fa-flickr"){ $xValor = "fa-flickr"; }
+                        if($xType=="fa-facebook-square"){ $xValor = "fa-facebook-f"; }
+                        if($xType=="fa-twitter-square"){ $xValor = "fa-twitter"; }
+                        if($xType=="fa-google-plus-official"){ $xValor = "fa-google-plus-g"; }
+                        if($xType=="fa-linkedin"){ $xValor = "fa-linkedin-in"; }
+                        if($xType=="fa-behance"){ $xValor = "fa-behance"; }
+                        if($xType=="fa-youtube-play"){ $xValor = "fa-youtube"; }
+                        if($xType=="fa-vimeo"){ $xValor = "fa-vimeo-v"; }
+                        if($xType=="fa-wordpress"){ $xValor = "fa-wordpress"; }
+                        if($xType=="fa-tumblr-square"){ $xValor = "fa-tumblr"; }
+                        if($xType=="fa-pinterest"){ $xValor = "fa-pinterest-p"; }
+                        if($xType=="fa-instagram"){ $xValor = "fa-instagram"; }
+                        if($xType=="fa-flickr"){ $xValor = "fa-flickr"; }
                 ?>
-                <a href="" target="_blank"><span class="social"><i class="fab fa-linkedin-in"></i></span></a>
-                <a href="" target="_blank"><span class="social"><i class="fab fa-facebook-f"></i></span></a>
-                <a href="" target="_blank"><span class="social"><i class="fab fa-instagram"></i></span></a>
-
+                <a href="<?php echo $xLinks; ?>" target="_blank"><span class="social"><i class="fab <?php echo $xValor; ?>"></i></span></a>
+                <?php
+                    }
+                    mysqli_free_result($resultadoSol);
+                ?>
             </div>
             <div class="row" style="background-color: black;">
                 <div class="col-md-6"></div>
                 <div class="col-md-6" align="right">
-                    <p class="derecho">Serpyman 2018 - Dise&ntilde;o por <a href="update.pe">Update Global Marketing</p>
+                    <p class="derecho">Serpyman 2018 - Dise&ntilde;o por <a href="www.update.pe">Update Global Marketing</p>
                 </div>
             </div>
-        </div>    
+        </div>
     </section>
     <!--Footer-->
     <!--End pagewrapper-->
