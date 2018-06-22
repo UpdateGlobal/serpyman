@@ -1,3 +1,4 @@
+<?php include("cms/module/conexion.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,7 +66,7 @@
                                 $xMap         = $filaCot['map'];
                         ?>
                         <ul class="clearfix">
-                            <li><i class="fas fa-map-marker-alt" style="color:#000;"></i> <strong>Direcci&oacute;n:</strong> <?php echo $xDireccion; ?></li>
+                            <li><i class="fas fa-map-marker-alt" style="color:#000;"></i> <strong>Direcci&oacute;n:</strong> <?php echo $xDirection; ?></li>
                             <li><i class="fas fa-mobile-alt" style="color:#000;"></i> <strong>Tel&eacute;fonos:</strong> <?php echo $xPhone; ?></li>
                             <li><i class="fas fa-envelope" style="color:#000;"></i> <strong>Correo:</strong> <?php echo $xEmail; ?></li>
                         </ul>

@@ -36,11 +36,12 @@ if ($eliminar == "true") {
     <style>
       @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
         td:nth-of-type(1):before { content: "Título"; }
-        td:nth-of-type(2):before { content: "Orden"; }
-        td:nth-of-type(3):before { content: "Estado"; }
-        td:nth-of-type(4):before { content: ""; }
+        td:nth-of-type(2):before { content: "Imágen"; }
+        td:nth-of-type(3):before { content: "Orden"; }
+        td:nth-of-type(4):before { content: "Estado"; }
         td:nth-of-type(5):before { content: ""; }
         td:nth-of-type(6):before { content: ""; }
+        td:nth-of-type(7):before { content: ""; }
       }
     </style>
     <script>
@@ -99,7 +100,8 @@ if ($eliminar == "true") {
                   <table class="table">
                     <thead>
                       <tr>
-                        <th width="55%" scope="col">T&iacute;tulo</th>
+                        <th width="35%" scope="col">T&iacute;tulo</th>
+                        <th width="30%" scope="col">Im&aacute;gen</th>
                         <th width="10%" scope="col">Orden</th>
                         <th width="10%" scope="col">Estado</th>
                         <th width="5%" scope="col"></th>
@@ -114,11 +116,13 @@ if ($eliminar == "true") {
                         while($filaBan = mysqli_fetch_array($resultadoservicio)){
                           $xCodigo    = $filaBan['cod_servicio'];
                           $xTitulo    = $filaBan['titulo'];
+                          $xImagen    = $filaBan['imagen'];
                           $xOrden     = $filaBan['orden'];
                           $xEstado    = $filaBan['estado'];
                       ?>
                       <tr>
                         <td><?php echo $xTitulo; ?></td>
+                        <td><img src="assets/img/servicios/<?php echo $xImagen; ?>" /></td>
                         <td><?php echo $xOrden; ?></td>
                         <td><strong>
                           <?php if($xEstado=="1"){ echo "[Activo]"; }else{ echo "[Inactivo]";} ?>

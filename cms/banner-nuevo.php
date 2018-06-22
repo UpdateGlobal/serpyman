@@ -102,7 +102,7 @@ if($proceso == "Registrar"){
                   <label class="col-form-label" for="link">Enlace:</label>
                 </div>
                 <div class="col-8 col-lg-10">
-                  <textarea class="form-control" name="link" id="link"></textarea>
+                  <input class="form-control" type="text" name="link" id="link" />
                 </div>
               </div>
 

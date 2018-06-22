@@ -13,17 +13,21 @@ if($proceso == ""){
   $filaSer = mysqli_fetch_array($ejecutarServicios);
     $cod_servicio = $filaSer['cod_servicio'];
     $titulo       = $filaSer['titulo'];
+    $imagen       = $filaSer['imagen'];
     $descripcion  = $filaSer['descripcion'];
+    $form         = $filaSer['form'];
     $orden        = $filaSer['orden'];
     $estado       = $filaSer['estado'];
 }
 if($proceso=="Actualizar"){
   $cod_servicio     = $_POST['cod_servicio'];
   $titulo           = mysqli_real_escape_string($enlaces, $_POST['titulo']);
+  $imagen           = $_POST['imagen'];
   $descripcion      = mysqli_real_escape_string($enlaces, $_POST['descripcion']);
+  if(isset($_POST['form'])){$form = $_POST['form'];}else{$form = 0;}
   if(isset($_POST['orden'])){$orden = $_POST['orden'];}else{$orden = 0;}
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
-  $actualizarServicios  = "UPDATE servicios SET cod_servicio='$cod_servicio', titulo='$titulo', descripcion='$descripcion', orden='$orden', estado='$estado' WHERE cod_servicio='$cod_servicio'";
+  $actualizarServicios  = "UPDATE servicios SET cod_servicio='$cod_servicio', titulo='$titulo', imagen='$imagen', descripcion='$descripcion', form='$form', orden='$orden', estado='$estado' WHERE cod_servicio='$cod_servicio'";
   $resultadoActualizar = mysqli_query($enlaces,$actualizarServicios) or die('Consulta fallida: ' . mysqli_error($enlaces));
   header("Location:servicios.php");
 }
@@ -38,6 +42,11 @@ if($proceso=="Actualizar"){
         if(document.fcms.titulo.value==""){
           alert("Debe escribir un título");
           document.fcms.titulo.focus();
+          return;
+        }
+        if(document.fcms.imagen.value==""){
+          alert("Debe subir una imagen");
+          document.fcms.imagen.focus();
           return;
         }
         document.fcms.action = "servicio-edit.php";
@@ -94,6 +103,19 @@ if($proceso=="Actualizar"){
 
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
+                  <label class="col-form-label" for="imagen">Imagen:</label><br>
+                  <small>(646px x 500px)</small>
+                </div>
+                <div class="col-4 col-lg-8">
+                  <input class="form-control" id="imagen" name="imagen" type="text" value="<?php echo $imagen; ?>">
+                </div>
+                <div class="col-4 col-lg-2">
+                  <button class="btn btn-info" type="button" name="boton2" onClick="javascript:Imagen('SER');" /><i class="fa fa-save"></i> Examinar</button>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-4 col-lg-2">
                   <label class="col-form-label" for="descripcion">Texto:</label>
                 </div>
                 <div class="col-8 col-lg-10">
@@ -107,6 +129,15 @@ if($proceso=="Actualizar"){
                 </div>
                 <div class="col-2 col-lg-1">
                   <input class="form-control" name="orden" type="text" id="orden" value="<?php echo $orden; ?>" onKeyPress="return soloNumeros(event)" />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-4 col-lg-2">
+                  <label class="col-form-label" for="form">Formulario (?):</label>
+                </div>
+                <div class="col-8 col-lg-10">
+                  <input type="checkbox" id="form" name="form" data-size="small" data-color="#48b0f7" data-provide="switchery" value="1" <?php if($form=="1"){echo "checked";} ?>>
                 </div>
               </div>
 

@@ -56,7 +56,19 @@
                                     </ul>
                                 </li>
                                 <li><a href="galeria.php"><i class="fas fa-angle-right"></i> Galer&iacute;a</a></li>
+                                <?php
+                                    $consultarCon = "SELECT * FROM contenidos WHERE cod_contenido='9' AND estado='1'";
+                                    $resultadoCon = mysqli_query($enlaces,$consultarCon) or die('Consulta fallida: ' . mysqli_error($enlaces));
+                                    while($filaCon = mysqli_fetch_array($resultadoCon)){
+                                        $xEstado = $filaCon['estado'];
+                                        if($xEstado=='1'){
+                                ?>
                                 <li><a href="politicas-serpyman.php"><i class="fas fa-angle-right"></i> Politicas</a></li>
+                                <?php
+                                        } 
+                                    }
+                                    mysqli_free_result($resultadoCon);
+                                ?>
                                 <li><a href="blog.php"><i class="fas fa-angle-right"></i> Blog</a></li>
                                 <li><a href="contacto-serpyman.php"><i class="fas fa-angle-right"></i> Contacto</a></li>
                             </ul>
@@ -94,13 +106,14 @@
                 </div>
             </div>
         </div>
-        <!--imagenMovil-->
-        <section class="hidden-sm hidden-md hidden-lg">
-            <div class="container-fluid" style="padding: 0;margin: 0;">
-                <div align="center" style="margin-top: -100px;">
-                    <h2 class="aaa">Expertos <br><span>en <br></span>Seguridad</h2>
-                </div>
-                <img src="img/bg_movil.png" style="width: 100%;">
+    </div>
+    <!--imagenMovil-->
+    <section class="hidden-sm hidden-md hidden-lg">
+        <div class="container-fluid" style="padding: 0;margin: 0;">
+            <div align="center" style="margin-top: -100px;">
+                <h2 class="aaa">Expertos <br><span>en <br></span>Seguridad</h2>
             </div>
-        </section>
-        <!--imagenMovil-->
+            <img src="img/bg_movil.png" style="width: 100%;">
+        </div>
+    </section>
+    <!--imagenMovil-->
