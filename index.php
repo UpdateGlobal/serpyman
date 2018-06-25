@@ -91,7 +91,7 @@
                             ?></p>
                             <br>
                             <div class="link-btn">
-                                <a href="#" class="primary-btn aboutbtn hvr-bounce-to-left"><span class="btn-text">LEER M&Aacute;S...</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a>
+                                <a href="nosotros.php" class="primary-btn aboutbtn hvr-bounce-to-left"><span class="btn-text">LEER M&Aacute;S...</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a>
                             </div>
                         </div>
                     </div>

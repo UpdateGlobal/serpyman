@@ -1,0 +1,25 @@
+.contenido-texto table.table-bordered tr td {
+    border: 0px none !important;
+}
+
+.contenido-texto .table-bordered {
+    border: 0px none !important;
+}
+
+.contenido-texto .table-bordered {
+    border: 0px none !important;
+}
+
+.contenido-texto ul li{
+	list-style-image:  url("../img/arrow.png") !important;
+}
+
+.contenido-texto ol li{
+	list-style-type: decimal;
+}
+
+@media only screen and (max-width:768px){
+	.contenido-texto img {
+	    max-width: 100%;
+	}
+}
