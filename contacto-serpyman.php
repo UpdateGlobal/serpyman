@@ -6,13 +6,12 @@
 </head>
 <body>
 <div class="page-wrapper">
-
-    <?php include('modulo/menu.php'); ?>    
+    <?php include('modulo/menu.php'); ?>
     <!-- Page Banner -->
-    <section class="page-banner" style="background-image:url(img/serpyman_head.png);">
+    <section class="page-banner" style="background-image:url(/img/serpyman_head.png);">
         <div class="auto-container text-right">
             <h1>Serpyman / Contactanos</h1>
-            <ul class="bread-crumb"><li><a href="index.php">Home</a></li> <li>Contactanos</li></ul>
+            <ul class="bread-crumb"><li><a href="/index.php">Home</a></li> <li>Contactanos</li></ul>
         </div>
     </section>
     <!-- Page Banner -->
@@ -21,41 +20,48 @@
     	<div class="auto-container">
         	<div class="row clearfix">
             	<div class="col-md-6 col-sm-12 col-xs-12 contact-form wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
-                	<div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
-                        <h2>Contac<span>tanos</span></h2>
-                    </div>
-                    <div id="contact-form">
+                    <div class="row" id="contact-form">
                         <div class="field-container clearfix">
-                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                            	<input type="text" id="nombre" name="nombre" value="" placeholder="Nombre">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+                                    <h2>Contac<span>tanos</span></h2>
+                                </div>
                             </div>
-                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                            	<input type="text" id="apellidos" name="apellidos" value="" placeholder="Apellidos">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                            	<input class="form-group" type="text" id="nombre" name="nombre" value="" placeholder="Nombre">
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                            	<input class="form-group" type="text" id="apellidos" name="apellidos" value="" placeholder="Apellidos">
                             </div>
                             <div class="clearfix"></div>
-                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                            	<input type="text" id="telefono" name="telefono" value="" placeholder="Telefono">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                            	<input class="form-group" type="text" id="telefono" name="telefono" value="" placeholder="Telefono">
                             </div>
-                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                                <input type="email" id="email" name="email" value="" placeholder="Correo">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <input class="form-group" type="email" id="email" name="email" value="" placeholder="Correo">
                             </div>
-                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            	<textarea name="Mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            	<textarea class="form-group" name="Mensaje" id="mensaje" placeholder="Mensaje"></textarea>
                             </div>
-                            <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                            <div class="col-md-12 col-sm-12 co-xs-12">
                                 <div id="mail-status"></div>
                             </div>
-                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            	<button name="submit" onClick="sendContact();" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Enviar Mensaje</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            	<button name="submit" onClick="sendContact();" class="primary-btn hvr-bounce-to-left">
+                                    <span class="btn-text">Enviar Mensaje</span>
+                                    <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 contact-form wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
-                    <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
-                        <h2>Mas<span> Contacto</span></h2>
-                    </div>
                     <div class="project-info">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+                                <h2>Mas<span> Contacto</span></h2>
+                            </div>
+                        </div>
                         <?php
                             $consultarCot = 'SELECT * FROM contacto';
                             $resultadoCot = mysqli_query($enlaces,$consultarCot) or die('Consulta fallida: ' . mysqli_error($enlaces));
@@ -85,7 +91,7 @@
         valid = validateContact();
         if(valid) {
             jQuery.ajax({
-                url: "contact_form.php",
+                url: "/contact_form.php",
                 data:'nombre='+$("#nombre").val()+'apellidos='+$("#apellidos").val()+'&email='+$("#email").val()+'&telefono='+$("#telefono").val()+'&mensaje='+$("#mensaje").val(),
                 type: "POST",
                 success:function(data){

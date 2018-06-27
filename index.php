@@ -21,8 +21,8 @@
                                 $xImagen    = $filaBan['imagen'];
                                 $xLink      = $filaBan['link'];
                         ?>
-                        <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-2.jpg"  data-saveperformance="off" data-title="With Awsome Services"> 
-                            <img src="cms/assets/img/banner/<?php echo $xImagen; ?>" alt="<?php echo $xTitulo; ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                        <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="/images/main-slider/image-2.jpg"  data-saveperformance="off" data-title="With Awsome Services"> 
+                            <img src="/cms/assets/img/banner/<?php echo $xImagen; ?>" alt="<?php echo $xTitulo; ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                             
                             <div class="tp-caption lfb tp-resizeme"
                             data-x="right" data-hoffset="-15"
@@ -80,7 +80,7 @@
                     <div class="col-md-6 col-xs-12">
                         
                         <div class="sec-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
-                            <h2><?php echo $xTitulo; ?><span>Man</span></h2>
+                            <h2><?php echo $xTitulo; ?> <span>Serpyman</span></h2>
                         </div>
                         <div class="sec-text wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
                             <p><?php 
@@ -91,12 +91,12 @@
                             ?></p>
                             <br>
                             <div class="link-btn">
-                                <a href="nosotros.php" class="primary-btn aboutbtn hvr-bounce-to-left"><span class="btn-text">LEER M&Aacute;S...</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a>
+                                <a href="/nosotros.php" class="primary-btn aboutbtn hvr-bounce-to-left"><span class="btn-text">LEER M&Aacute;S...</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12" align="center">
-                        <img src="cms/assets/img/nosotros/<?php echo $xImagen; ?>" class="img-responsive img_welcome" />
+                        <img src="/cms/assets/img/nosotros/<?php echo $xImagen; ?>" class="img-responsive img_welcome" />
                     </div>
                     <?php
                         mysqli_free_result($resultadoCon);
@@ -117,6 +117,7 @@
                     $resultadoservicio = mysqli_query($enlaces,$consultarservicio) or die('Consulta fallida: ' . mysqli_error($enlaces));
                     while($filaSer = mysqli_fetch_array($resultadoservicio)){
                         $xCodigo      = $filaSer['cod_servicio'];
+                        $xSlug        = $filaSer['slug'];
                         $xTitulo      = $filaSer['titulo'];
                         $xDescripcion = $filaSer['descripcion'];
                         $xImagen      = $filaSer['imagen'];
@@ -126,7 +127,7 @@
                 <article class="col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="post-inner">
                         <figure class="image">
-                            <img class="img-responsive" src="cms/assets/img/servicios/<?php echo $xImagen; ?>" alt="" />
+                            <img class="img-responsive" src="/cms/assets/img/servicios/<?php echo $xImagen; ?>" alt="" />
                             <span class="curve"></span>
                         </figure>
                         <div class="content">
@@ -138,7 +139,7 @@
                                     $xDescripcion_r = substr($strCut,0,strrpos($strCut, ' ')).'...';
                                     echo strip_tags($xDescripcion_r);
                                 ?></div>
-                                <a href="seguridad.php?cod_servicio=<?php echo $xCodigo; ?>" class="read_more">Leer M&aacute;s...</a>
+                                <a href="/seguridad/<?php echo $xSlug; ?>" class="read_more">Leer M&aacute;s...</a>
                             </div>
                         </div>
                     </div>
@@ -209,12 +210,13 @@
                                             $xCodigo = $filaNot['cod_noticia'];
                                             $xTitulo = $filaNot['titulo'];
                                             $xImagen = $filaNot['imagen'];
+                                            $xSlug   = $filaNot['slug'];
                                             $xDescripcion = $filaNot['noticia'];
                                             $xFecha = $filaNot['fecha'];
                                     ?>
                                     <div class="post-inner">
                                         <figure class="image">
-                                            <img class="img-responsive" src="cms/assets/img/noticias/<?php echo $xImagen; ?>" alt="" />
+                                            <img class="img-responsive" src="/cms/assets/img/noticias/<?php echo $xImagen; ?>" alt="" />
                                             <span class="curve"></span>
                                         </figure>
                                         <div class="content">
@@ -226,7 +228,7 @@
                                                     $xDescripcion_r = substr($strCut,0,strrpos($strCut, ' ')).'...';
                                                 ?>
                                                 <div class="text"><?php echo $xDescripcion_r; ?></div>
-                                                <a href="post.php?cod_noticia=<?php echo $xCodigo; ?>" class="read_more">Leer M&aacute;s...</a>
+                                                <a href="/noticia/<?php echo $xSlug; ?>" class="read_more">Leer M&aacute;s...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -237,6 +239,7 @@
                                 </article>
                             </section>
                         </div>
+
                         <div class="col-md-6" align="left">
                             <?php
                                 $consultarCon = "SELECT * FROM contenidos WHERE cod_contenido='8'";
@@ -265,7 +268,7 @@
                                 ?>
                                 <div class="item" align="center">
                                     <div class="txt_clientes"></div>
-                                    <img src="cms/assets/img/carrusel/<?php echo $xImagen; ?>" />
+                                    <img src="/cms/assets/img/carrusel/<?php echo $xImagen; ?>" />
                                 </div>
                                 <?php
                                     }
@@ -273,12 +276,13 @@
                                 ?>    
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
         <!--News Area-->
-        <?php include ('modulo/footer.php') ?>
+        <?php include('modulo/footer.php'); ?>
     </div>
 </div>
 </body>

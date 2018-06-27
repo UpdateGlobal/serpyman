@@ -9,11 +9,12 @@
                 $resultadoCategoria = mysqli_query($enlaces,$consultarCategoria) or die('Consulta fallida: ' . mysqli_error($enlaces));
                 while($filaCat = mysqli_fetch_array($resultadoCategoria)){
                     $xCodigo    = $filaCat['cod_categoria'];
+                    $xSlug      = $filaCat['slug'];
                     $xCategoria = $filaCat['categoria'];
                     $xOrden     = $filaCat['orden'];
                     $xEstado    = $filaCat['estado'];
             ?>
-            <li><i class="fas fa-chevron-right"></i><a href="categoria.php?cod_categoria=<?php echo $xCodigo; ?>" class="black"> <?php echo $xCategoria; ?></a></li>
+            <li><i class="fas fa-chevron-right"></i><a href="/categorias/<?php echo $xSlug; ?>" class="black"> <?php echo $xCategoria; ?></a></li>
             <?php 
                 }
                 mysqli_free_result($resultadoCategoria);

@@ -582,15 +582,15 @@
 **********************************************/
 
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800);
-@import url(http://fonts.googleapis.com/css?family=Hind:400,300,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700);
 
-@import url('font-awesome.css');
-@import url('flaticon.css');
-@import url('animate.css');
-@import url('hover.css');
-@import url('jquery.fancybox.css');
-@import url('owl.css');
+@import url('/font-awesome.css');
+@import url('/flaticon.css');
+@import url('/animate.css');
+@import url('/hover.css');
+@import url('/jquery.fancybox.css');
+@import url('/owl.css');
 
 /*** 
 
@@ -912,7 +912,7 @@ ul,li{
   background-color:#ffffff; 
   background-position:center center; 
   background-repeat:no-repeat; 
-  background-image:url(../images/icons/preloader2.GIF);}
+  background-image:url(../images/icons/preloader2.gif);}
 
 .txt_cliente{
 	font-size: 22px;

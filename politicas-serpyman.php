@@ -6,12 +6,12 @@
 </head>
 <body>
 <div class="page-wrapper">
-    <?php include ('modulo/menu.php') ?>
+    <?php include ('modulo/menu.php'); ?>
     <!-- Page Banner -->
-    <section class="page-banner" style="background-image:url(img/serpyman_head.png);">
+    <section class="page-banner" style="background-image:url(/img/serpyman_head.png);">
         <div class="auto-container text-right">
             <h1>Serpyman / Nuestras Politicas</h1>
-            <ul class="bread-crumb"><li><a href="index.php">Home</a></li> <li>Nuestras Politicas</li></ul>
+            <ul class="bread-crumb"><li><a href="/index.php">Home</a></li> <li>Nuestras Politicas</li></ul>
         </div>
     </section>
     <!-- Page Banner -->
@@ -42,7 +42,7 @@
                 </section>
             </div>
             <div class="col-md-6 col-xs-12">
-                <img src="cms/assets/img/nosotros/<?php echo $xImagen; ?>" alt="" class="imgpolitic img-responsive">
+                <img src="/cms/assets/img/nosotros/<?php echo $xImagen; ?>" alt="" class="imgpolitic img-responsive">
             </div>
             <?php
                 }
@@ -52,7 +52,7 @@
     </div>
     <!--contenido de servicios-->
     <br><br><br>
-    <?php include ('modulo/footer.php') ?>
+    <?php include ('modulo/footer.php'); ?>
 </div>
 </body>
 </html>

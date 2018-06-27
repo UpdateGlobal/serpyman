@@ -1,0 +1,13 @@
+AddDefaultCharset utf-8
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !-d 
+RewriteCond %{REQUEST_URI} !-f 
+RewriteCond %{REQUEST_URI} !^/seguridad/(.*) [OR]
+RewriteCond %{REQUEST_URI} !^/categorias/(.*) [OR]
+RewriteCond %{REQUEST_URI} !^/noticia/(.*) [OR]
+RewriteRule ^seguridad/([^/]*) seguridad.php?slug=$1
+RewriteRule ^categorias/([^/]*) categorias.php?slug=$1
+RewriteRule ^categorias/([^/]*) categorias.php?slug=$1&p=2
+RewriteRule ^noticia/([^/]*) post.php?slug=$1

@@ -18,6 +18,14 @@
 	list-style-type: decimal;
 }
 
+.primary-btn {
+	left: 0px !important;
+}
+
+.autor img{
+    width: 276px;
+}
+
 @media only screen and (max-width:768px){
 	.contenido-texto img {
 	    max-width: 100%;

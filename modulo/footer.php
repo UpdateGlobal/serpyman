@@ -11,7 +11,7 @@
                             $xContenido   = $filaCon['contenido'];
                             $xEstado      = $filaCon['estado'];
                     ?>
-                    <img src="cms/assets/img/nosotros/<?php echo $xImagen; ?>" class="logo_fo img_foo">
+                    <img src="/cms/assets/img/nosotros/<?php echo $xImagen; ?>" class="logo_fo img_foo" />
                     <p class="title_foo"><?php echo $xContenido; ?></p>
                     <?php
                         mysqli_free_result($resultadoCon);
@@ -48,28 +48,28 @@
             <div class="row" style="background-color: black;">
                 <div class="col-md-6"></div>
                 <div class="col-md-6" align="right">
-                    <p class="derecho">Serpyman 2018 - Dise&ntilde;o por <a href="www.update.pe">Update Global Marketing</p>
+                    <p class="derecho">Serpyman 2018 - Dise&ntilde;o por <a href="/index.php">Update Global Marketing</p>
                 </div>
             </div>
         </div>
     </section>
     <!--Footer-->
     <!--End pagewrapper-->
-    <script src="js/jquery.js"></script> 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/revolution.min.js"></script>
-    <script src="js/bxslider.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.mixitup.min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/script.js"></script>
+    <script src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/revolution.min.js"></script>
+    <script src="/js/bxslider.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.mixitup.min.js"></script>
+    <script src="/js/jquery.fancybox.pack.js"></script>
+    <script src="/js/wow.js"></script>
+    <script src="/js/script.js"></script>
     <script type="text/javascript">
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin:10,
             nav:false,
-            autoplay:false,
+            autoplay:true,
             responsive:{
                 0:{
                     items:1

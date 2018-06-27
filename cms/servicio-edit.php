@@ -22,12 +22,22 @@ if($proceso == ""){
 if($proceso=="Actualizar"){
   $cod_servicio     = $_POST['cod_servicio'];
   $titulo           = mysqli_real_escape_string($enlaces, $_POST['titulo']);
+  $slug           = $titulo;
+  $slug           = preg_replace('~[^\pL\d]+~u', '-', $slug);
+  $slug           = iconv('utf-8', 'us-ascii//TRANSLIT', $slug);
+  $slug           = preg_replace('~[^-\w]+~', '', $slug);
+  $slug           = trim($slug, '-');
+  $slug           = preg_replace('~-+~', '-', $slug);
+  $slug           = strtolower($slug);
+  if (empty($slug)){
+      return 'n-a';
+  }
   $imagen           = $_POST['imagen'];
   $descripcion      = mysqli_real_escape_string($enlaces, $_POST['descripcion']);
   if(isset($_POST['form'])){$form = $_POST['form'];}else{$form = 0;}
   if(isset($_POST['orden'])){$orden = $_POST['orden'];}else{$orden = 0;}
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
-  $actualizarServicios  = "UPDATE servicios SET cod_servicio='$cod_servicio', titulo='$titulo', imagen='$imagen', descripcion='$descripcion', form='$form', orden='$orden', estado='$estado' WHERE cod_servicio='$cod_servicio'";
+  $actualizarServicios  = "UPDATE servicios SET cod_servicio='$cod_servicio', titulo='$titulo', slug='$slug', imagen='$imagen', descripcion='$descripcion', form='$form', orden='$orden', estado='$estado' WHERE cod_servicio='$cod_servicio'";
   $resultadoActualizar = mysqli_query($enlaces,$actualizarServicios) or die('Consulta fallida: ' . mysqli_error($enlaces));
   header("Location:servicios.php");
 }

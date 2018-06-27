@@ -1,14 +1,10 @@
 <?php include("cms/module/conexion.php"); ?>
-<?php
-$cod_servicio   = $_REQUEST['cod_servicio'];
-
-$consultaServicios = "SELECT * FROM servicios WHERE cod_servicio='$cod_servicio'";
+<?php $slug = $_REQUEST['slug']; ?>
+<?php 
+$consultaServicios = "SELECT * FROM servicios WHERE slug='$slug'";
 $ejecutarServicios = mysqli_query($enlaces,$consultaServicios) or die('Consulta fallida: ' . mysqli_error($enlaces));
 $filaSer = mysqli_fetch_array($ejecutarServicios);
-    $xTitulo       = $filaSer['titulo'];
-    $xImagen       = $filaSer['imagen'];
-    $xDescripcion  = $filaSer['descripcion'];
-    $xForm         = $filaSer['form'];
+    $cod_servicio = $filaSer['cod_servicio'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,11 +13,20 @@ $filaSer = mysqli_fetch_array($ejecutarServicios);
 </head>
 <body>
     <?php include("modulo/menu.php"); ?>
+    <?php 
+        $consultaServicios = "SELECT * FROM servicios WHERE cod_servicio='$cod_servicio'";
+        $ejecutarServicios = mysqli_query($enlaces,$consultaServicios) or die('Consulta fallida: ' . mysqli_error($enlaces));
+        $filaSer = mysqli_fetch_array($ejecutarServicios);
+            $xTitulo       = $filaSer['titulo'];
+            $xImagen       = $filaSer['imagen'];
+            $xDescripcion  = $filaSer['descripcion'];
+            $xForm         = $filaSer['form'];
+    ?>
     <!-- Page Banner -->
-    <section class="page-banner" style="background-image:url(img/serpyman_head.png);">
+    <section class="page-banner" style="background-image:url(/img/serpyman_head.png);">
         <div class="auto-container text-right">
-        	<h1>Serpyman / Seguridad Comercial</h1>
-            <ul class="bread-crumb"><li><a href="index.php">Home</a></li> <li>Seguridad Comercial</li></ul>
+        	<h1>Serpyman / <?php echo $xTitulo; ?></h1>
+            <ul class="bread-crumb"><li><a href="/index.php">Home</a></li> <li><?php echo $xTitulo; ?></li></ul>
         </div>
     </section>
     <!-- Page Banner -->
@@ -49,7 +54,7 @@ $filaSer = mysqli_fetch_array($ejecutarServicios);
             </div>
             <?php }else{ ?>
             <div class="col-md-4 col-xs-12" style="margin-top: 50px;">
-                <figure class="image" data-wow-delay="300ms" data-wow-duration="1000ms"><img class="img-responsive" src="cms/assets/img/servicios/<?php echo $xImagen; ?>" alt=""></figure>
+                <figure class="image" data-wow-delay="300ms" data-wow-duration="1000ms"><img class="img-responsive" src="/cms/assets/img/servicios/<?php echo $xImagen; ?>" alt=""></figure>
             </div>
             <?php } ?>
         </div>
