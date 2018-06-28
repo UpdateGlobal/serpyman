@@ -4,23 +4,74 @@
                     <br><br>
                     <p>Bríndanos tus datos y te contactarenos a la brevedad posible.</p>
                 </div>
-                <form  method="post" action="sendemail.php">
-                    <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="nombre" value="" placeholder="Nombre">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <input class="form_group" type="text" id="nombre" name="nombre" value="" placeholder="Nombre">
                     </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="apellido" value="" placeholder="Apellido">
+                     <div class="col-md-6 col-sm-12 col-xs-12">
+                        <input class="form_group" type="text" id="apellidos" name="apellidos" value="" placeholder="Apellidos">
                     </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="telefono" value="" placeholder="Telefono">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <input class="form_group" type="text" id="email" name="email" value="" placeholder="Correo">
                     </div>
-                     <div class="form_group col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" name="correo" value="" placeholder="Correo">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <input class="form_group" type="text" id="telefono" name="telefono" value="" placeholder="Telefono">
                     </div>
-                    <div class="form_group col-md-12 col-sm-12 col-xs-12">
-                        <textarea name="message" placeholder="Message"></textarea>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <textarea class="form_group" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
                     </div>
-                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <button type="submit" name="submit-form" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Enviar Mensaje</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
+                    <div class="col-md-12 col-sm-12 co-xs-12">
+                        <div id="mail-status"></div>
                     </div>
-                </form>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <button type="submit" name="submit-form" onClick="sendContact();" class="primary-btn hvr-bounce-to-left">
+                            <span class="btn-text">Enviar Mensaje</span> 
+                            <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong>
+                        </button>
+                    </div>
+                </div>
+                <script>
+                    function sendContact(){
+                        var valid;
+                        valid = validateContact();
+                        if(valid) {
+                            jQuery.ajax({
+                                url: "/contact_form.php",
+                                data:'nombre='+$("#nombre").val()+'apellidos='+$("#apellidos").val()+'&email='+$("#email").val()+'&telefono='+$("#telefono").val()+'&mensaje='+$("#mensaje").val(),
+                                type: "POST",
+                                success:function(data){
+                                    $("#mail-status").html(data);
+                                },
+                                error:function (){}
+                            });
+                        }
+                    }
+                    function validateContact() {
+                        var valid = true;
+                        if(!$("#nombre").val()) {
+                            $("#nombre").css('background-color','#f28282');
+                            valid = false;
+                        }
+                        if(!$("#apellidos").val()) {
+                            $("#apellidos").css('background-color','#f28282');
+                            valid = false;
+                        }
+                        if(!$("#email").val()) {
+                            $("#email").css('background-color','#f28282');
+                            valid = false;
+                        }
+                        if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+                            $("#email").css('background-color','#f28282');
+                            valid = false;
+                        }
+                        if(!$("#telefono").val()) {
+                            $("#telefono").css('background-color','#f28282');
+                            valid = false;
+                        }
+                        if(!$("#mensaje").val()) {
+                            $("#mensaje").css('background-color','#f28282');
+                            valid = false;
+                        }
+                        return valid;
+                    }
+                </script>

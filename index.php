@@ -122,7 +122,7 @@
                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="link-btn text-right"><a class="primary-btn banerboton hvr-bounce-to-left"><span class="btn-text">LEER MAS +</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div></div>
                     </li>
 
-<!--                     <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" style="filter:brightness(0.5)" data-thumb="img/sldier/slider2.png"  data-saveperformance="off"  data-title="With Awsome Services"> 
+                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" style="filter:brightness(0.5)" data-thumb="img/sldier/slider2.png"  data-saveperformance="off"  data-title="With Awsome Services"> 
                     <img src="img/sldier/slider2.png"  alt="" style="filter:brightness(0.5)" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption lfb tp-resizeme"
@@ -212,7 +212,7 @@
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"
                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="link-btn text-right"><a class="primary-btn banerboton hvr-bounce-to-left"><span class="btn-text">LEER MAS +</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div></div>
-                    </li> -->
+                    </li>
                     
                     
                 </ul>

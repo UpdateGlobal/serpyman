@@ -71,7 +71,7 @@
                   </li>
                   <li class="list-group-item">
                     <strong>Url:</strong><br>
-                    http://<?php echo $xUrl; ?>
+                    https://<?php echo $xUrl; ?>
                   </li>
                   <li class="list-group-item">
                     <strong>Im&aacute;genes para redes sociales:</strong><br>

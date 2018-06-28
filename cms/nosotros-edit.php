@@ -36,21 +36,25 @@ if($proceso == "Actualizar"){
     <?php include("module/head.php"); ?>
     <script type="text/javascript" src="assets/js/rutinas.js"></script>
     <script>
-    function Validar(){
-      if(document.fcms.titulo_contenido.value==""){
-        alert("Debe escribir un título");
-        document.fcms.titulo_contenido.focus();
-        return;
+      function Validar(){
+      <?php if($cod_contenido==6){ ?>
+
+      <?php }else{ ?>  
+        if(document.fcms.titulo_contenido.value==""){
+          alert("Debe escribir un título");
+          document.fcms.titulo_contenido.focus();
+          return;
+        }
+      <?php } ?>
+        
+        document.fcms.action = "nosotros-edit.php";
+        document.fcms.proceso.value="Actualizar";
+        document.fcms.submit();
       }
-      
-      document.fcms.action = "nosotros-edit.php";
-      document.fcms.proceso.value="Actualizar";
-      document.fcms.submit();
-    }
-    function Imagen(codigo){
-      url = "agregar-foto.php?id=" + codigo;
-      AbrirCentro(url,'Agregar', 475, 180, 'no', 'no');
-    }
+      function Imagen(codigo){
+        url = "agregar-foto.php?id=" + codigo;
+        AbrirCentro(url,'Agregar', 475, 180, 'no', 'no');
+      }
     </script>
     <script src="assets/js/visitante-alert.js"></script>
   </head>
@@ -80,7 +84,9 @@ if($proceso == "Actualizar"){
           <h4 class="card-title"><strong>Editar Contenidos</strong></h4>
           <form class="fcms" name="fcms" method="post" action="" data-provide="validation" data-disable="false">
             <div class="card-body">
+              <?php if($cod_contenido==6){ ?>
 
+              <?php }else{ ?>
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
                   <label class="col-form-label require" for="titulo_contenido">T&iacute;tulo:</label>
@@ -91,6 +97,7 @@ if($proceso == "Actualizar"){
                   <div class="invalid-feedback"></div>
                 </div>
               </div>
+              <?php } ?>
 
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
@@ -102,11 +109,12 @@ if($proceso == "Actualizar"){
                 </div>
               </div>
 
-              <?php if($cod_contenido==1){ ?>
+              <?php if($cod_contenido==1 || $cod_contenido==6){ ?>
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
                   <label class="col-form-label" for="logo">Imagen:</label><br>
-                  <small>(500px x 500px)</small>
+                  <?php if($cod_contenido==1){ ?><small>(500px x 500px)</small><?php } ?>
+                  <?php if($cod_contenido==6){ ?><small>(300px x 82px)</small><?php } ?>
                 </div>
                 <div class="col-4 col-lg-8">
                   <?php if($xVisitante=="1"){ ?><p><?php echo $img_contenido; ?></p><?php } ?>

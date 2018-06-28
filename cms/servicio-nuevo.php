@@ -9,11 +9,23 @@ if (isset($_REQUEST['proceso'])) {
 }
 if($proceso == "Registrar"){
   $titulo       = mysqli_real_escape_string($enlaces, $_POST['titulo']);
+  $slug         = $titulo;
+  $slug         = preg_replace('~[^\pL\d]+~u', '-', $slug);
+  $slug         = iconv('utf-8', 'us-ascii//TRANSLIT', $slug);
+  $slug         = preg_replace('~[^-\w]+~', '', $slug);
+  $slug         = trim($slug, '-');
+  $slug         = preg_replace('~-+~', '-', $slug);
+  $slug         = strtolower($slug);
+  if (empty($slug)){
+      return 'n-a';
+  }
+  $imagen       = $_POST['imagen'];
   $descripcion  = mysqli_real_escape_string($enlaces, $_POST['descripcion']);
+  if(isset($_POST['form'])){$form = $_POST['form'];}else{$form = 0;}
   if(isset($_POST['orden'])){$orden = $_POST['orden'];}else{$orden = 0;}
   if(isset($_POST['estado'])){$estado = $_POST['estado'];}else{$estado = 0;}
-    
-  $insertarServicio = "INSERT INTO servicios(titulo, descripcion, orden, estado)VALUE('$titulo', '$descripcion', '$orden', '$estado')";
+
+  $insertarServicio = "INSERT INTO servicios(titulo, slug, imagen, descripcion, form, orden, estado)VALUE('$titulo', '$slug', '$imagen', '$descripcion', '$form', '$orden', '$estado')";
   $resultadoInsertar = mysqli_query($enlaces,$insertarServicio);
   $mensaje = "<div class='alert alert-success' role='alert'>
           <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
@@ -87,6 +99,19 @@ if($proceso == "Registrar"){
 
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
+                  <label class="col-form-label" for="imagen">Imagen:</label><br>
+                  <small>(646px x 500px)</small>
+                </div>
+                <div class="col-4 col-lg-8">
+                  <input class="form-control" id="imagen" name="imagen" type="text" />
+                </div>
+                <div class="col-4 col-lg-2">
+                  <button class="btn btn-info" type="button" name="boton2" onClick="javascript:Imagen('SER');" /><i class="fa fa-save"></i> Examinar</button>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-4 col-lg-2">
                   <label class="col-form-label" for="texto">Texto:</label>
                 </div>
                 <div class="col-8 col-lg-10">
@@ -100,6 +125,15 @@ if($proceso == "Registrar"){
                 </div>
                 <div class="col-2 col-lg-1">
                   <input class="form-control" name="orden" type="text" id="orden" onKeyPress="return soloNumeros(event)" />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-4 col-lg-2">
+                  <label class="col-form-label" for="form">Formulario (?):</label>
+                </div>
+                <div class="col-2 col-lg-1">
+                  <input type="checkbox" name="form" data-size="small" data-color="#48b0f7" data-provide="switchery" value="1" checked>
                 </div>
               </div>
 

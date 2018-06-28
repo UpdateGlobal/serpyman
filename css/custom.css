@@ -1,0 +1,44 @@
+.contenido-texto table.table-bordered tr td {
+    border: 0px none !important;
+}
+
+.contenido-texto .table-bordered {
+    border: 0px none !important;
+}
+
+.contenido-texto .table-bordered {
+    border: 0px none !important;
+}
+
+.contenido-texto ul li{
+	list-style-image:  url("../img/arrow.png") !important;
+}
+
+.contenido-texto ol li{
+	list-style-type: decimal;
+}
+
+.primary-btn {
+	left: 0px !important;
+}
+
+.autor img{
+    width: 276px;
+}
+
+.top-services .post .content .inner-box {
+    height: 250px;
+}
+
+@media only screen and (max-width:768px){
+	.contenido-texto img {
+	    max-width: 100%;
+	}
+	.top-services .post .content .inner-box {
+	    height: auto;
+	}
+	.title_foo {
+	    margin: 0px 20px;
+	    color: white;
+	}
+}

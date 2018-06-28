@@ -96,20 +96,7 @@ if ($eliminar == "true") {
               <div class="card-body">
                 <a class="btn btn-info" href="<?php if($xVisitante=="0"){ ?>social-nuevo.php<?php }else{ ?>javascript:visitante();<?php } ?>"><i class="fa fa-plus"></i> A&ntilde;adir nuevo</a>
                 <hr>
-                <!-- < ?php 
-                      if($type="fa-facebook-square"){ echo "fa-facebook-f"; }
-                      if($type="fa-twitter-square"){ echo "fa-twitter"; }
-                      if($type="fa-google-plus-official"){ echo "fa-google-plus-g"; }
-                      if($type="fa-linkedin"){ echo "fa-linkedin-in"; }
-                      if($type="fa-behance"){ echo "fa-behance"; }
-                      if($type="fa-youtube-play"){ echo "fa-youtube"; }
-                      if($type="fa-vimeo"){ echo "fa-vimeo-v"; }
-                      if($type="fa-wordpress"){ echo "fa-wordpress"; }
-                      if($type="fa-tumblr-square"){ echo "fa-tumblr"; }
-                      if($type="fa-pinterest"){ echo "fa-pinterest-p"; }
-                      if($type="fa-instagram"){ echo "fa-instagram"; }
-                      if($type="fa-flickr"){ echo "fa-flickr"; }
-                    ?> -->
+               
                 <form name="fcms" method="post" action="">
                   <table class="table">
                     <thead>

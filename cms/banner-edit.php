@@ -114,7 +114,7 @@ if($proceso=="Actualizar"){
                   <label class="col-form-label" for="link">Enlaces:</label>
                 </div>
                 <div class="col-8 col-lg-10">
-                  <textarea class="form-control" name="link" id="link"><?php echo $link; ?></textarea>
+                  <input class="form-control" type="text" name="link" id="link" value="<?php echo $link; ?>" />
                 </div>
               </div>
 
