@@ -1,5 +1,5 @@
 <?php include("cms/module/conexion.php"); ?>
-<?php $slug = $_REQUEST['slug'];  
+<?php $slug = $_REQUEST['slug'];
 $consultaNoticias = "SELECT * FROM noticias WHERE slug='$slug'";
 $ejecutarNoticias = mysqli_query($enlaces,$consultaNoticias) or die('Consulta fallida: ' . mysqli_error($enlaces));
 $filaNot = mysqli_fetch_array($ejecutarNoticias);

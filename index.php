@@ -21,8 +21,8 @@
                                 $xImagen    = $filaBan['imagen'];
                                 $xLink      = $filaBan['link'];
                         ?>
-                        <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="/images/main-slider/image-2.jpg"  data-saveperformance="off" data-title="With Awsome Services"> 
-                            <img src="/cms/assets/img/banner/<?php echo $xImagen; ?>" alt="<?php echo $xTitulo; ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                        <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="/images/main-slider/image-2.jpg"  data-saveperformance="off" data-title="<?php echo $xTitulo; ?>">
+                            <img src="/cms/assets/img/banner/<?php echo $xImagen; ?>" alt="<?php echo $xTitulo; ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                             
                             <div class="tp-caption lfb tp-resizeme"
                             data-x="right" data-hoffset="-15"
@@ -50,7 +50,7 @@
                             data-endelementdelay="0.3"
                             data-endspeed="1200"
                             data-endeasing="Power4.easeIn"
-                            style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="link-btn text-right"><a href="<?php echo $xLink; ?>" class="primary-btn banerboton hvr-bounce-to-left"><span class="btn-text">LEER MAS +</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div></div>
+                            style="z-index: 99; max-width: auto; max-height: auto; white-space: nowrap;"><div class="link-btn text-right"><a href="<?php echo $xLink; ?>" class="primary-btn banerboton hvr-bounce-to-left"><span class="btn-text">LEER MAS +</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div></div>
                         </li>
                         <?php 
                             }
@@ -124,7 +124,7 @@
                         $xOrden       = $filaSer['orden'];
                         $xEstado      = $filaSer['estado'];
                 ?>
-                <article class="col-md-4 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                <article class="col-lg-4 col-md-6 col-sm-6 col-xs-12 post wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="post-inner">
                         <figure class="image">
                             <img class="img-responsive" src="/cms/assets/img/servicios/<?php echo $xImagen; ?>" alt="" />

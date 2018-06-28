@@ -26,8 +26,19 @@
     width: 276px;
 }
 
+.top-services .post .content .inner-box {
+    height: 250px;
+}
+
 @media only screen and (max-width:768px){
 	.contenido-texto img {
 	    max-width: 100%;
+	}
+	.top-services .post .content .inner-box {
+	    height: auto;
+	}
+	.title_foo {
+	    margin: 0px 20px;
+	    color: white;
 	}
 }

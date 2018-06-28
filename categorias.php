@@ -1,9 +1,9 @@
 <?php include("cms/module/conexion.php"); ?>
-<?php $slug = $_REQUEST['slug']; 
-$consultarCategorias = "SELECT * FROM noticias_categorias WHERE slug='$slug'";
-$resultadoCategorias = mysqli_query($enlaces,$consultarCategorias) or die('Consulta fallida: ' . mysqli_error($enlaces));
-$filaCat = mysqli_fetch_array($resultadoCategorias);
-    $cod_categoria = $filaCat['cod_categoria']; 
+<?php $slug = $_REQUEST['slug'];
+$consultaCategorias = "SELECT * FROM noticias_categorias WHERE slug='$slug'";
+$ejecutarCategorias = mysqli_query($enlaces,$consultaCategorias) or die('Consulta fallida: ' . mysqli_error($enlaces));
+$filaCat = mysqli_fetch_array($ejecutarCategorias);
+    $cod_categoria  = $filaCat['cod_categoria'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@ $filaCat = mysqli_fetch_array($resultadoCategorias);
 </head>
 <body>
 <div class="page-wrapper">
-    <?php include("modulo/menu.php"); ?>
+    <?php include ('modulo/menu.php') ?>
     <!-- Page Banner -->
     <section class="page-banner" style="background-image:url(/img/serpyman_head.png);">
         <div class="auto-container text-right">
@@ -32,7 +32,25 @@ $filaCat = mysqli_fetch_array($resultadoCategorias);
                 <!--Servicios-->
                 <section class="top-services">
                     <?php
-                        $consultarNoticias = "SELECT * FROM noticias WHERE cod_categoria='$cod_categoria' ORDER BY fecha";
+                        $consultarNoticias = "SELECT * FROM noticias WHERE estado='1' AND cod_categoria=$cod_categoria";
+                        $resultadoNoticias = mysqli_query($enlaces, $consultarNoticias);
+                        $total_registros = mysqli_num_rows($resultadoNoticias);
+                        if($total_registros==0){ 
+                    ?>
+                        <h2>No hay entradas en nuestro blog, pronto tendremos novedades.</h2>
+                        <div style="height: 40px;"></div>
+                    <?php 
+                        }else{
+                        $registros_por_paginas = 4;
+                        $total_paginas = ceil($total_registros/$registros_por_paginas);
+                        $pagina = intval($_GET['p']);
+                        if($pagina<1 or $pagina>$total_paginas){
+                            $pagina=1;
+                        }
+                        $posicion = ($pagina-1)*$registros_por_paginas;
+                        $limite = "LIMIT $posicion, $registros_por_paginas";
+
+                        $consultarNoticias = "SELECT * FROM noticias WHERE estado='1' AND cod_categoria=$cod_categoria ORDER BY fecha ASC $limite";
                         $resultadoNoticias = mysqli_query($enlaces,$consultarNoticias) or die('Consulta fallida: ' . mysqli_error($enlaces));
                         while($filaNot = mysqli_fetch_array($resultadoNoticias)){
                             $xCodigo        = $filaNot['cod_noticia'];
@@ -52,7 +70,7 @@ $filaCat = mysqli_fetch_array($resultadoCategorias);
                                     <h3><?php echo $xTitulo; ?></h3>
                                     <div class="text"><?php 
                                         $xDescripcion_r = strip_tags($xDescripcion);
-                                        $strCut = substr($xDescripcion_r,0,100);
+                                        $strCut = substr($xDescripcion_r,0,200);
                                         $xDescripcion_r = substr($strCut,0,strrpos($strCut, ' ')).'...';
                                         echo strip_tags($xDescripcion_r);
                                     ?></div>
@@ -65,6 +83,35 @@ $filaCat = mysqli_fetch_array($resultadoCategorias);
                         }
                         mysqli_free_result($resultadoNoticias);
                     ?>
+                    <div class="clearfix"></div>
+                    <?php
+                        $paginas_mostrar = 5;
+                        if ($total_paginas>1){
+                            echo "<div class='row text-center'>
+                                <div class='col-lg-12'>
+                                    <ul class='pagination'>";
+                            if($pagina>1){
+                                echo "<li><a href='/categorias/".$slug."&p=".($pagina-1)."'>&laquo;</a></li>";
+                            }
+                            for($i=$pagina; $i<=$total_paginas && $i<=($pagina+$paginas_mostrar); $i++){
+                                if($i==$pagina){
+                                    echo "<li class='active'><a><strong>$i</strong></a></li>";
+                                }else{
+                                    echo "<li><a href='/categorias/".$slug."&p=$i'>$i</a></li>";
+                                }
+                            }
+                            if(($pagina+$paginas_mostrar)<$total_paginas){
+                                echo "<li>...</li>";
+                            }
+                            if($pagina<$total_paginas){
+                                echo "  <li><a href='/categorias/".$slug."&p=".($pagina+1)."'>&raquo;</a></li>";
+                            }
+                            echo "  </ul>
+                                </div>
+                            </div>";
+                        }
+                    }
+                    ?>                               
                 </section>
                 <!--Servicios-->
             </div>

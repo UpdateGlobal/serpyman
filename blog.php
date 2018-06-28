@@ -35,7 +35,7 @@
                         <div style="height: 40px;"></div>
                     <?php 
                         }else{
-                        $registros_por_paginas = 3;
+                        $registros_por_paginas = 4;
                         $total_paginas = ceil($total_registros/$registros_por_paginas);
                         $pagina = intval($_GET['p']);
                         if($pagina<1 or $pagina>$total_paginas){
@@ -44,7 +44,7 @@
                         $posicion = ($pagina-1)*$registros_por_paginas;
                         $limite = "LIMIT $posicion, $registros_por_paginas";
 
-                        $consultarNoticias = "SELECT * FROM noticias WHERE cod_categoria ORDER BY fecha";
+                        $consultarNoticias = "SELECT * FROM noticias WHERE estado='1' ORDER BY fecha ASC $limite";
                         $resultadoNoticias = mysqli_query($enlaces,$consultarNoticias) or die('Consulta fallida: ' . mysqli_error($enlaces));
                         while($filaNot = mysqli_fetch_array($resultadoNoticias)){
                             $xCodigo        = $filaNot['cod_noticia'];
@@ -64,7 +64,7 @@
                                     <h3><?php echo $xTitulo; ?></h3>
                                     <div class="text"><?php 
                                         $xDescripcion_r = strip_tags($xDescripcion);
-                                        $strCut = substr($xDescripcion_r,0,100);
+                                        $strCut = substr($xDescripcion_r,0,200);
                                         $xDescripcion_r = substr($strCut,0,strrpos($strCut, ' ')).'...';
                                         echo strip_tags($xDescripcion_r);
                                     ?></div>
@@ -78,8 +78,8 @@
                         mysqli_free_result($resultadoNoticias);
                     ?>
                     <div class="clearfix"></div>
-                    <?php       
-                        $paginas_mostrar = 10;
+                    <?php
+                        $paginas_mostrar = 5;
                         if ($total_paginas>1){
                             echo "<div class='row text-center'>
                                 <div class='col-lg-12'>
@@ -102,11 +102,10 @@
                             }
                             echo "  </ul>
                                 </div>
-                            </div>
-                        <hr>";
+                            </div>";
                         }
                     }
-                    ?>
+                    ?>                               
                 </section>
                 <!--Servicios-->
             </div>

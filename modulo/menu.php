@@ -1,32 +1,36 @@
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck  hidden-xs hidden-sm" style="position: fixed; top: 70%; width: 70px;">
-        <?php
-            $consultarSol = "SELECT * FROM social WHERE estado='1' ORDER BY orden";
-            $resultadoSol = mysqli_query($enlaces,$consultarSol) or die('Consulta fallida: ' . mysqli_error($enlaces));
-            while($filaSol = mysqli_fetch_array($resultadoSol)){
-                $xType      = $filaSol['type'];
-                $xLinks     = $filaSol['links'];
-                $xOrden     = $filaSol['orden'];
-                if($xType=="fa-facebook-square"){ $xValor = "fa-facebook-f"; }
-                if($xType=="fa-twitter-square"){ $xValor = "fa-twitter"; }
-                if($xType=="fa-google-plus-official"){ $xValor = "fa-google-plus-g"; }
-                if($xType=="fa-linkedin"){ $xValor = "fa-linkedin-in"; }
-                if($xType=="fa-behance"){ $xValor = "fa-behance"; }
-                if($xType=="fa-youtube-play"){ $xValor = "fa-youtube"; }
-                if($xType=="fa-vimeo"){ $xValor = "fa-vimeo-v"; }
-                if($xType=="fa-wordpress"){ $xValor = "fa-wordpress"; }
-                if($xType=="fa-tumblr-square"){ $xValor = "fa-tumblr"; }
-                if($xType=="fa-pinterest"){ $xValor = "fa-pinterest-p"; }
-                if($xType=="fa-instagram"){ $xValor = "fa-instagram"; }
-                if($xType=="fa-flickr"){ $xValor = "fa-flickr"; }
-        ?>
+    <div class="header-fix-right is_stuck  hidden-xs hidden-sm" style="position: fixed; bottom: 0%; width: 70px;">
         <ul class="header-fix-redes">
-            <li><a href="<?php echo $xLinks; ?>" target="_blank"><img src="/img/facebook-f.svg" width="12"></a></li>
+            <?php
+                $consultarSol = "SELECT * FROM social WHERE estado='1' ORDER BY orden";
+                $resultadoSol = mysqli_query($enlaces,$consultarSol) or die('Consulta fallida: ' . mysqli_error($enlaces));
+                while($filaSol = mysqli_fetch_array($resultadoSol)){
+                    $xType      = $filaSol['type'];
+                    $xLinks     = $filaSol['links'];
+                    $xOrden     = $filaSol['orden'];
+                    if($xType=="fa-facebook-square"){ $xValor = "facebook-f"; }
+                    if($xType=="fa-twitter-square"){ $xValor = "twitter-f"; }
+                    if($xType=="fa-google-plus-official"){ $xValor = "google-plus-f"; }
+                    if($xType=="fa-linkedin"){ $xValor = "linkedin-f"; }
+                    if($xType=="fa-behance"){ $xValor = "behance-f"; }
+                    if($xType=="fa-youtube-play"){ $xValor = "youtube-f"; }
+                    if($xType=="fa-vimeo"){ $xValor = "vimeo-f"; }
+                    if($xType=="fa-wordpress"){ $xValor = "wordpress-f"; }
+                    if($xType=="fa-tumblr-square"){ $xValor = "tumblr-f"; }
+                    if($xType=="fa-pinterest"){ $xValor = "pinterest-f"; }
+                    if($xType=="fa-instagram"){ $xValor = "instagram-f"; }
+                    if($xType=="fa-flickr"){ $xValor = "flickr-f"; }
+            ?>
+            <li>
+                <a href="<?php echo $xLinks; ?>" target="_blank">
+                    <img src="/img/icon/<?php echo $xValor; ?>.svg" width="12">
+                </a>
+            </li>
+            <?php
+                }
+                mysqli_free_result($resultadoSol);
+            ?>
         </ul>
-        <?php
-            }
-            mysqli_free_result($resultadoSol);
-        ?>
         <span class="header-fix-text">S&iacute;guenos:</span>
     </div>
     <!--stikySocial-->
