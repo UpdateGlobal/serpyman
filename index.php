@@ -90,7 +90,7 @@
         <div class="tp-banner-container hidden-xs">
             <div class="tp-banner" >
                 <ul>
-                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-2.jpg"  data-saveperformance="off"  data-title="With Awsome Services"> 
+                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="img/sldier/slider1.png"  data-saveperformance="off"  data-title="With Awsome Services"> 
                     <img src="img/sldier/slider1.png"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption lfb tp-resizeme"
@@ -122,8 +122,8 @@
                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="link-btn text-right"><a class="primary-btn banerboton hvr-bounce-to-left"><span class="btn-text">LEER MAS +</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div></div>
                     </li>
 
-                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-2.jpg"  data-saveperformance="off"  data-title="With Awsome Services"> 
-                    <img src="img/sldier/slider2.png"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+<!--                     <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" style="filter:brightness(0.5)" data-thumb="img/sldier/slider2.png"  data-saveperformance="off"  data-title="With Awsome Services"> 
+                    <img src="img/sldier/slider2.png"  alt="" style="filter:brightness(0.5)" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption lfb tp-resizeme"
                     data-x="right" data-hoffset="-15"
@@ -137,7 +137,7 @@
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"
-                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="big-title text-right"><h2><span class="txt-white">La Mejor</span> Seguridad <span class="txt-white"><br></span> <span class="txt-white">Peruana</span></h2></div></div>
+                    style="z-index: ; max-width: auto; max-height: auto; white-space: nowrap;"><div class="big-title text-right"><h2><span class="txt-white">La Mejor</span> Seguridad <span class="txt-white"><br></span> <span class="txt-white">Peruana</span></h2></div></div>
                     
                     <div class="tp-caption lfb tp-resizeme"
                     data-x="right" data-hoffset="-15"
@@ -168,8 +168,8 @@
                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="link-btn text-right"><a class="primary-btn banerboton hvr-bounce-to-left"><span class="btn-text">LEER MAS +</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div></div>
                     </li>
 
-                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-2.jpg"  data-saveperformance="off"  data-title="With Awsome Services"> 
-                    <img src="img/sldier/slider3.png"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" style="filter:brightness(0.5)" data-thumb="img/sldier/slider3.png"  data-saveperformance="off"  data-title="With Awsome Services"> 
+                    <img src="img/sldier/slider3.png"  alt="" style="filter:brightness(0.5)" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption lfb tp-resizeme"
                     data-x="right" data-hoffset="-15"
@@ -212,7 +212,7 @@
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"
                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="link-btn text-right"><a class="primary-btn banerboton hvr-bounce-to-left"><span class="btn-text">LEER MAS +</span> <strong class="icon"><span class="f-icon flaticon-right11"></span></strong></a></div></div>
-                    </li>
+                    </li> -->
                     
                     
                 </ul>
