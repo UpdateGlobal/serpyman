@@ -902,7 +902,11 @@ ul,li{
 }
 
 .preloader{ 
-  position:fixed; 
+<<<<<<< HEAD
+  position:unset; 
+=======
+  position: unset; 
+>>>>>>> f65c1d7baaf81923385e15cc40bebf264de848fb
   display: block !important;
   left:0px; 
   top:0px;
@@ -1568,7 +1572,11 @@ ul,li{
 
 .main-slider{
     position: relative;
-    z-index: -999;
+<<<<<<< HEAD
+    /* z-index: -999; */
+=======
+   /* z-index: -999;*/
+>>>>>>> f65c1d7baaf81923385e15cc40bebf264de848fb
     margin-top: -70px;
 }
 

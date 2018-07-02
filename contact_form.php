@@ -5,10 +5,10 @@ $mailHeaders = 'From: '.$_POST["email"]."\r\n".
 'Reply-To: '.$_POST["email"]."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
-$nombres = isset( $_POST['nombre'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['nombre'] ) : "";
-$apellidos = isset( $_POST['apellidos'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['apellidos'] ) : "";
-$email = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
-$telefono = isset( $_POST['telefono'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['telefono'] ) : "";
+$nombres = isset( $_POST['nombre'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]/", "", $_POST['nombre'] ) : "";
+$apellidos = isset( $_POST['apellidos'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]/", "", $_POST['apellidos'] ) : "";
+$email = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]/", "", $_POST['email'] ) : "";
+$telefono = isset( $_POST['telefono'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]/", "", $_POST['telefono'] ) : "";
 $comentarios = isset( $_POST['mensaje'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['mensaje'] ) : "";
 
 $mensaje = "Información del Contacto\n";

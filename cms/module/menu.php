@@ -74,6 +74,31 @@
             </a>
           </li>
 
+          <li class="menu-item <?php echo ($menu == "galeria" ? "active" : "")?>">
+            <a class="menu-link <?php echo ($menu == "galeria" ? "open" : "") ?>"  href="#">
+              <span class="icon fa fa-picture-o"></span>
+              <span class="title">Galer&iacute;as</span>
+              <span class="arrow"></span>
+            </a>
+
+            <ul class="menu-submenu" <?php echo ($menu == "galeria" ? "style='display:block;'" : "")?> >
+              <li class="menu-item">
+                <a class="menu-link" href="galeria-categorias.php">
+                  <span class="dot"></span>
+                  <span class="title">Categor&iacute;as</span>
+                </a>
+              </li>
+
+              <li class="menu-item">
+                <a class="menu-link" href="galeria.php">
+                  <span class="dot"></span>
+                  <span class="title">Fotos</span>
+                </a>
+              </li>
+            </ul>
+
+          </li>
+
           <li class="menu-item <?php echo ($menu == "noticias" ? "active" : "")?>">
             <a class="menu-link <?php echo ($menu == "noticias" ? "open" : "") ?>"  href="#">
               <span class="icon fa fa-newspaper-o"></span>

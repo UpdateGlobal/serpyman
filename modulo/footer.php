@@ -55,15 +55,15 @@
     </section>
     <!--Footer-->
     <!--End pagewrapper-->
-    <script src="/js/jquery.js"></script> 
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/revolution.min.js"></script>
-    <script src="/js/bxslider.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/jquery.mixitup.min.js"></script>
-    <script src="/js/jquery.fancybox.pack.js"></script>
-    <script src="/js/wow.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/jquery.js" type="text/javascript"></script> 
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/revolution.min.js" type="text/javascript"></script>
+    <script src="/js/bxslider.js" type="text/javascript"></script>
+    <script src="/js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.mixitup.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="/js/wow.js" type="text/javascript"></script>
+    <script src="/js/script.js" type="text/javascript"></script>
     <script type="text/javascript">
         $('.owl-carousel').owlCarousel({
             loop:true,
@@ -83,7 +83,7 @@
             }
         })
     </script>
-    <script>
+    <script type="text/javascript">
         function openNav() {
             document.getElementById("mySidenav").style.width = "300px";
         }

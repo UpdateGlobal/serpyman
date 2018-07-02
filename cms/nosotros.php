@@ -238,7 +238,11 @@
                       $xOrden     = $filaVal['orden'];
                   ?>
                   <div class="col-12 col-lg-3 text-center">
-                    <?php echo $xImagen; ?>
+                    <?php if($xImagen==1){ echo "<img src='../img/home-01.svg' width='150px' />"; }; ?>
+                    <?php if($xImagen==2){ echo "<img src='../img/home-02.svg' width='150px' />"; }; ?>
+                    <?php if($xImagen==3){ echo "<img src='../img/home-03.svg' width='150px' />"; }; ?>
+                    <?php if($xImagen==4){ echo "<img src='../img/home-04.svg' width='150px' />"; }; ?>
+                    <div style="height: 15px;"></div>
                     <h4><?php echo $xTitulo; ?></h4>
                     <p><strong>Estado: <?php if($xEstado=="1"){echo "[Activo]";}else{ echo "[Inactivo]"; } ?> </strong></p>
                     <a href="valores-edit.php?cod_valores=<?php echo $xCodigo; ?>" class="btn btn-xs btn-primary"><i class="fa fa-refresh"></i> Editar</a>

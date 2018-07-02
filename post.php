@@ -43,13 +43,25 @@ $filaNot = mysqli_fetch_array($ejecutarNoticias);
     <meta property="og:image" content="/cms/assets/img/noticias/<?php echo $xImagen; ?>" />
     <!-- facebook open graph ends from here -->
     <?php
+        mysqli_free_result($ejecutarNoticias);
+    ?>
+    <?php
         mysqli_free_result($resultadoMet);
     ?>
 </head>
 <body>
 <div class="page-wrapper">
     <?php include('modulo/menu.php'); ?>
-    
+    <?php 
+        $consultaNoticias = "SELECT * FROM noticias WHERE cod_noticia='$cod_noticia'";
+        $ejecutarNoticias = mysqli_query($enlaces,$consultaNoticias) or die('Consulta fallida: ' . mysqli_error($enlaces));
+        $filaNot = mysqli_fetch_array($ejecutarNoticias);
+            $xTitulo        = htmlspecialchars($filaNot['titulo']);
+            $xDescripcion   = $filaNot['noticia'];
+            $xImagen        = $filaNot['imagen'];
+            $xFecha         = $filaNot['fecha'];
+            $xAutor         = $filaNot['autor'];
+    ?>
     <!-- Page Banner -->
     <section class="page-banner" style="background-image:url(/img/serpyman_head.png);">
         <div class="auto-container text-right">
@@ -123,6 +135,9 @@ $filaNot = mysqli_fetch_array($ejecutarNoticias);
             </div>
         </div>
     </div>
+    <?php
+        mysqli_free_result($ejecutarNoticias);
+    ?>
     <!--contenido de servicios-->
     <br><br><br>
     <?php include('modulo/footer.php') ?>

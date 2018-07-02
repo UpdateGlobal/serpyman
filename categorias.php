@@ -35,7 +35,7 @@ $filaCat = mysqli_fetch_array($ejecutarCategorias);
                         $consultarNoticias = "SELECT * FROM noticias WHERE estado='1' AND cod_categoria=$cod_categoria";
                         $resultadoNoticias = mysqli_query($enlaces, $consultarNoticias);
                         $total_registros = mysqli_num_rows($resultadoNoticias);
-                        if($total_registros==0){ 
+                        if($total_registros==0){
                     ?>
                         <h2>No hay entradas en nuestro blog, pronto tendremos novedades.</h2>
                         <div style="height: 40px;"></div>

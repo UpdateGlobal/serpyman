@@ -260,7 +260,6 @@ label span {
     margin: 0px;
 }
 
-
 /* File button */
 .input-block-level{
     display:block;
@@ -330,12 +329,20 @@ label span {
     background-color: #03c4cc;
 }
 
-
 @media only screen and (max-width:1199px){
+    
+}
 
+@media screen and (min-width: 1025px) {
+    .header-fix-redes a:hover:after {
+        background: #ffd65880;
+    }
 }
+
 @media only screen and (max-width:991px){
+    
 }
+
 @media only screen and (max-width:768px){
     .quick-nav ul {
         float: none;
@@ -347,20 +354,17 @@ label span {
     .custom-input *::before {
         display: none !important;
     }
-    
     .dataTables_length {
         display: none !important;
     }
-
     .dataTables_filter {
         width: 100% !important;
         float:none !important;
     }
-
     .TableTools {
         display: none !important;
     }
 }
 @media only screen and (max-width:480px){
-
+    
 }

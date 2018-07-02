@@ -86,7 +86,7 @@ if($proceso=="Actualizar"){
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
                   <label class="col-form-label require" for="imagen">Imagen:</label><br>
-                  <small>(-px x -px)</small>
+                  <small>(1600px x 600px)</small>
                 </div>
                 <div class="col-4 col-lg-8">
                   <?php if($xVisitante=="1"){ ?><p><?php echo $imagen; ?></p><?php } ?>
@@ -105,7 +105,9 @@ if($proceso=="Actualizar"){
                   <label class="col-form-label" for="titulo">T&iacute;tulo:</label>
                 </div>
                 <div class="col-8 col-lg-10">
-                  <input class="form-control" name="titulo" type="text" id="titulo" value="<?php echo htmlspecialchars($titulo); ?>" />
+                  <textarea data-provide="summernote" name="titulo" id="titulo" data-toolbar="slim">
+                    <?php echo htmlspecialchars($titulo); ?>
+                  </textarea>
                 </div>
               </div>
 

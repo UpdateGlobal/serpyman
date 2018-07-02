@@ -1,5 +1,19 @@
+    <?php
+        $consultarCot = 'SELECT * FROM contacto';
+        $resultadoCot = mysqli_query($enlaces,$consultarCot) or die('Consulta fallida: ' . mysqli_error($enlaces));
+        $filaCot  = mysqli_fetch_array($resultadoCot);
+            $xDireccion   = $filaCot['direction'];
+            $xPhone       = $filaCot['phone'];
+            $xEmail       = $filaCot['email'];
+    ?>
+    <div class="direcciones">
+        <div class="contenedor"><?php if($xEmail!=""){ ?><i class="fas fasx fa-envelope"></i> <?php echo $xEmail; ?><?php } ?><?php if($xPhone!=""){ ?> | <i class="fas fasx fa-mobile-alt"></i> <?php echo $xPhone; ?><?php } ?><?php if($xDireccion!=""){ ?> | <i class="fas fasx fa-map-marker-alt"></i> <?php echo $xDireccion; ?><?php } ?></div>
+    </div>
+    <?php
+        mysqli_free_result($resultadoCot);
+    ?>
     <!--stikySocial-->
-    <div class="header-fix-right is_stuck  hidden-xs hidden-sm" style="position: fixed; bottom: 0%; width: 70px;">
+    <div class="header-fix-right is_stuck hidden-xs hidden-sm" style="position: fixed; bottom: 0%; width: 70px;">
         <ul class="header-fix-redes">
             <?php
                 $consultarSol = "SELECT * FROM social WHERE estado='1' ORDER BY orden";
@@ -34,8 +48,8 @@
         <span class="header-fix-text">S&iacute;guenos:</span>
     </div>
     <!--stikySocial-->
-    <!-- Preloader
-    <div class="preloader"></div> -->
+    <!-- Preloader -->
+    <div class="preloader"></div>
     <!-- preloader -->
     <!--Menu-->
     <div class="container-fluid">
@@ -97,6 +111,7 @@
                                     }
                                     mysqli_free_result($resultadoCon);
                                 ?>
+                                <li><a href="/galerias.php"><i class="fas fa-angle-right"></i> Galer&iacute;a</a></li>
                                 <li><a href="/blog.php"><i class="fas fa-angle-right"></i> Blog</a></li>
                                 <li><a href="/contacto-serpyman.php"><i class="fas fa-angle-right"></i> Contacto</a></li>
                             </ul>

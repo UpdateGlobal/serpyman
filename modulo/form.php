@@ -37,7 +37,7 @@
                         if(valid) {
                             jQuery.ajax({
                                 url: "/contact_form.php",
-                                data:'nombre='+$("#nombre").val()+'apellidos='+$("#apellidos").val()+'&email='+$("#email").val()+'&telefono='+$("#telefono").val()+'&mensaje='+$("#mensaje").val(),
+                                data:'nombre='+$("#nombre").val()+'&apellidos='+$("#apellidos").val()+'&email='+$("#email").val()+'&telefono='+$("#telefono").val()+'&mensaje='+$("#mensaje").val(),
                                 type: "POST",
                                 success:function(data){
                                     $("#mail-status").html(data);

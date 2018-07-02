@@ -27,6 +27,10 @@
           <span class="icon fa fa-file-text"></span>
           <span class="title">Pol&iacute;ticas</span>
         </a>
+        <a class="dropdown-item" href="galeria.php">
+          <span class="icon fa fa-picture-o"></span>
+          <span class="title">Galer&iacute;a</span>
+        </a>
         <a class="dropdown-item" href="noticias.php">
           <span class="icon fa fa-newspaper-o"></span>
           <span class="title">Noticias</span>
