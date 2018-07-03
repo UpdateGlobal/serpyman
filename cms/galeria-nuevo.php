@@ -12,13 +12,11 @@ if (isset($_POST['proceso'])) {
 if($proceso == "Registrar"){
   $cod_categoria  = $_POST['cod_categoria'];
   $titulo         = mysqli_real_escape_string($enlaces, utf8_decode($_POST['titulo']));
-  $descripcion    = mysqli_real_escape_string($enlaces, utf8_decode($_POST['descripcion']));
   $imagen         = $_POST['imagen'];
-  $video          = $_POST['video'];
   $orden          = $_POST['orden'];
   $estado         = $_POST['estado'];
   
-  $insertarGalerias = "INSERT INTO galerias (cod_categoria, titulo, descripcion, imagen, video, orden, estado)VALUE('$cod_categoria', '$titulo', '$descripcion', '$imagen', '$video', '$orden', '$estado')";
+  $insertarGalerias = "INSERT INTO galerias (cod_categoria, titulo, imagen, orden, estado)VALUE('$cod_categoria', '$titulo', '$imagen', '$orden', '$estado')";
   $resultadoInsertar = mysqli_query($enlaces,$insertarGalerias) or die('Consulta fallida: ' . mysqli_error($enlaces));
   $mensaje = "<div class='alert alert-success' role='alert'>
             <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
@@ -111,16 +109,6 @@ if($proceso == "Registrar"){
 
               <div class="form-group row">
                 <div class="col-4 col-lg-2">
-                  <label class="col-form-label" for="descripcion">Descripci&oacute;n:</label>
-                </div>
-                <div class="col-8 col-lg-10">
-                  <input class="form-control" name="descripcion" type="text" id="descripcion" />
-                  <div class="invalid-feedback"></div>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-4 col-lg-2">
                   <label class="col-form-label require" for="imagen">Imagen:</label><br>
                   <small>(640px x 500px)</small>
                 </div>
@@ -130,18 +118,6 @@ if($proceso == "Registrar"){
                 </div>
                 <div class="col-4 col-lg-2">
                   <button class="btn btn-info" type="button" name="boton2" onClick="javascript:Imagen('GAL');" /><i class="fa fa-save"></i> Examinar</button>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-4 col-lg-2">
-                  <label class="col-form-label" for="video">V&iacute;deo:</label><br>
-                  <small>(Pegue en enlace del navegador)</small>
-                </div>
-                <div class="col-8 col-lg-10">
-                  <input class="form-control" name="video" type="text" id="video" />
-                  <small>(El v&iacute;deo anula la vista previa de la imagen)</small>
-                  <div class="invalid-feedback"></div>
                 </div>
               </div>
 

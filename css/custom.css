@@ -23,30 +23,30 @@
 }
 
 .autor img{
-    width: 276px;
+  width: 276px;
 }
 
 .top-services .post .content .inner-box {
-    height: 250px;
+  height: 250px;
 }
 
 .direcciones {
 	background: #000;
-    color: #fff;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    z-index: 9999;
-    font-weight: 300;
-    font-size: 13px;
-    position: fixed;
-    text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 9999;
+  font-weight: 300;
+  font-size: 13px;
+  position: fixed;
+  text-align: right;
 }
 
 .contenedor {
 	width: 1400px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .direcciones span{
@@ -135,6 +135,7 @@
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
+
 .portfolio .item-img-overlay a {
   font-size: 30px;
   position: absolute;
@@ -145,20 +146,42 @@
 .work-item {
   padding: 80px;
 }
+
 .work-item p {
   margin: 30px 0;
 }
+
 .work-item li {
   margin-bottom: 15px;
 }
+
 .work-item li span {
   font-weight: 600;
   padding-right: 5px;
 }
+
 .work-item .tags a {
   margin-right: 5px;
   font-size: 13px;
   color: #777;
+}
+
+.navbar {
+  position: relative;
+  min-height: 0px;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 1025px) {
+  .header-fix-redes a:hover {
+    color: #fff;
+  }
+  .header-fix-redes a:hover:after {
+    background: #fac24c8a;
+  }
+  .header-fix-redes a:hover:before {
+    color: #fff;
+  }
 }
 
 @media only screen and (max-width:768px){

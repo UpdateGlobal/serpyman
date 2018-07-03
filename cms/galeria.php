@@ -36,12 +36,11 @@ if ($eliminar == "true") {
       @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
         td:nth-of-type(1):before { content: "Título"; }
         td:nth-of-type(2):before { content: "Imagen"; }
-        td:nth-of-type(3):before { content: "Vídeo (?)"; }
-        td:nth-of-type(4):before { content: "Orden"; }
-        td:nth-of-type(5):before { content: "Estado"; }
+        td:nth-of-type(3):before { content: "Orden"; }
+        td:nth-of-type(4):before { content: "Estado"; }
+        td:nth-of-type(5):before { content: ""; }
         td:nth-of-type(6):before { content: ""; }
         td:nth-of-type(7):before { content: ""; }
-        td:nth-of-type(8):before { content: ""; }
       }
     </style>
     <script>
@@ -101,13 +100,12 @@ if ($eliminar == "true") {
                   <table class="table">
                     <thead>
                       <tr>
-                        <th width="15%" scope="col">T&iacute;tulo
+                        <th width="20%" scope="col">T&iacute;tulo
                           <input type="hidden" name="proceso">
                           <input type="hidden" name="eliminar" value="false">
                         </th>
-                        <th width="15%" scope="col">Categor&iacute;as</th>
+                        <th width="20%" scope="col">Categor&iacute;as</th>
                         <th width="20%" scope="col">Imagen</th>
-                        <th width="10%" scope="col">V&iacute;deo (?)</th>
                         <th width="10%" scope="col">Orden</th>
                         <th width="10%" scope="col">Estado</th>
                         <th width="5%" scope="col">&nbsp;</th>

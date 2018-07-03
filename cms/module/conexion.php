@@ -5,7 +5,10 @@ mysqli_select_db($enlaces,'update_serpyman') or die('No se pudo seleccionar la b
 /*$enlaces = mysqli_connect('localhost', 'serpyman_update', 'jVJxk$k8P_4L') or die('No se pudo conectar: ' . mysqli_error($enlaces));
 mysqli_select_db($enlaces,'serpyman_update') or die('No se pudo seleccionar la base de datos');*/
 
-$enlaces = mysqli_connect('localhost', 'update_serpyman', 'N]]-Em_eYLnL') or die('No se pudo conectar: ' . mysqli_error($enlaces));
-mysqli_select_db($enlaces,'update_serpyman') or die('No se pudo seleccionar la base de datos');
+/*$enlaces = mysqli_connect('localhost', 'update_serpyman', 'N]]-Em_eYLnL') or die('No se pudo conectar: ' . mysqli_error($enlaces));
+mysqli_select_db($enlaces,'update_serpyman') or die('No se pudo seleccionar la base de datos');*/
+
+$enlaces = mysqli_connect('localhost', 'yachaymu_serpyma', '$X&A;h88q0U}') or die('No se pudo conectar: ' . mysqli_error($enlaces));
+mysqli_select_db($enlaces,'yachaymu_serpyman') or die('No se pudo seleccionar la base de datos');
 
 ?>

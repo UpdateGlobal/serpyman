@@ -1,0 +1,25 @@
+.filter-button-group {
+  padding: 15px;
+}
+
+.thumbnail {
+  border-radius: 0px;
+  border: 0px;
+  padding: 0px;
+}
+a.pp_play, a.pp_arrow_previous, a.pp_arrow_next, a.pp_close {
+  display: none;
+}
+.pp_social .twitter {
+  float: left;
+  width: 60px;
+}
+.pp_social .facebook {
+  float: left;
+  margin-left: 15px;
+  width: 80px;
+  overflow: hidden;
+}
+.pp_nav {
+  margin-top: 0;
+}
